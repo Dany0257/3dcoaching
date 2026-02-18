@@ -393,20 +393,10 @@ if (contactForm) {
         // Get form data
         const formData = new FormData(contactForm);
 
-        // Validate CSRF token
-        const submittedToken = formData.get('csrf_token');
-        const storedToken = sessionStorage.getItem('csrf_token');
-
-        if (submittedToken !== storedToken) {
-            showFormMessage('Erreur de sécurité. Veuillez recharger la page.', 'error');
-            return;
-        }
-
         // Validate form data
         const validation = validateFormData(formData);
 
         if (!validation.isValid) {
-            // Show field-specific errors
             Object.keys(validation.errors).forEach(fieldId => {
                 showFieldError(fieldId, validation.errors[fieldId]);
             });
@@ -417,15 +407,6 @@ if (contactForm) {
         // Record rate limit attempt
         rateLimiter.recordAttempt();
 
-        // Sanitize all inputs
-        const sanitizedData = {
-            name: sanitizeInput(formData.get('name').trim()),
-            email: sanitizeInput(formData.get('email').trim()),
-            phone: sanitizeInput(formData.get('phone')?.trim() || ''),
-            service: sanitizeInput(formData.get('service')),
-            message: sanitizeInput(formData.get('message').trim())
-        };
-
         // Show loading state
         const submitButton = contactForm.querySelector('.btn-submit');
         const btnText = submitButton.querySelector('.btn-text');
@@ -435,37 +416,25 @@ if (contactForm) {
         btnLoader.style.display = 'inline';
         submitButton.disabled = true;
 
-        // Simulate form submission (replace with actual backend call)
         try {
-            // In production, send data to backend:
-            // const response = await fetch('/api/contact', {
-            //     method: 'POST',
-            //     headers: {
-            //         'Content-Type': 'application/json',
-            //         'X-CSRF-Token': submittedToken
-            //     },
-            //     body: JSON.stringify(sanitizedData)
-            // });
+            // Encode form data for Netlify
+            const encodedData = new URLSearchParams(new FormData(contactForm)).toString();
 
-            // Simulate network delay
-            await new Promise(resolve => setTimeout(resolve, 1500));
+            const response = await fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: encodedData
+            });
 
-            // Log sanitized data (for demonstration)
-            console.log('Form submitted with sanitized data:', sanitizedData);
-
-            // Show success message
-            showFormMessage(
-                'Merci pour votre message ! Nous vous contacterons bientôt.',
-                'success'
-            );
-
-            // Reset form
-            contactForm.reset();
-
-            // Generate new CSRF token
-            const newToken = generateCSRFToken();
-            document.getElementById('csrf-token').value = newToken;
-            sessionStorage.setItem('csrf_token', newToken);
+            if (response.ok) {
+                showFormMessage(
+                    'Merci pour votre message ! Nous vous contacterons bientôt.',
+                    'success'
+                );
+                contactForm.reset();
+            } else {
+                throw new Error('Erreur réseau');
+            }
 
         } catch (error) {
             console.error('Form submission error:', error);
@@ -474,7 +443,6 @@ if (contactForm) {
                 'error'
             );
         } finally {
-            // Reset button state
             btnText.style.display = 'inline';
             btnLoader.style.display = 'none';
             submitButton.disabled = false;
