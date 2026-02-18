@@ -5,26 +5,26 @@
 
 /* === CSS Variables & Design System === */
 :root {
-    /* Primary Colors */
-    --color-primary: #4F46E5;
-    --color-primary-dark: #4338CA;
-    --color-primary-light: #6366F1;
-    --color-secondary: #7C3AED;
-    --color-accent: #EC4899;
+    /* Primary Colors — Bleu marine & Doré */
+    --color-primary: #C9A84C;
+    --color-primary-dark: #A8893A;
+    --color-primary-light: #E8C97A;
+    --color-secondary: #0D1B3E;
+    --color-accent: #C9A84C;
 
     /* Neutral Colors */
-    --color-dark: #1F2937;
-    --color-dark-light: #374151;
+    --color-dark: #0D1B3E;
+    --color-dark-light: #1A2F5A;
     --color-gray: #6B7280;
     --color-light-gray: #E5E7EB;
     --color-white: #FFFFFF;
-    --color-bg: #F9FAFB;
+    --color-bg: #F4F6FA;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --gradient-secondary: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
-    --gradient-accent: linear-gradient(135deg, #EC4899 0%, #8B5CF6 100%);
-    --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    --gradient-primary: linear-gradient(135deg, #C9A84C 0%, #E8C97A 100%);
+    --gradient-secondary: linear-gradient(135deg, #0D1B3E 0%, #1A2F5A 100%);
+    --gradient-accent: linear-gradient(135deg, #C9A84C 0%, #E8C97A 100%);
+    --gradient-hero: linear-gradient(135deg, #0D1B3E 0%, #1A2F5A 60%, #243B6E 100%);
 
     /* Typography */
     --font-primary: 'Poppins', sans-serif;
@@ -174,7 +174,7 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(13, 27, 62, 0.97);
     backdrop-filter: blur(10px);
     box-shadow: var(--shadow-sm);
     z-index: var(--z-header);
@@ -219,7 +219,7 @@ img {
 
 .nav__link {
     font-weight: 500;
-    color: var(--color-dark);
+    color: var(--color-white);
     padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: var(--radius-sm);
     transition: var(--transition-fast);
@@ -751,7 +751,7 @@ img {
         right: -100%;
         width: 80%;
         height: 100vh;
-        background: var(--color-white);
+        background: var(--color-dark);
         box-shadow: var(--shadow-xl);
         padding: var(--spacing-lg) var(--spacing-md);
         transition: var(--transition-normal);
@@ -773,7 +773,7 @@ img {
         right: var(--spacing-md);
         font-size: 2rem;
         cursor: pointer;
-        color: var(--color-dark);
+        color: var(--color-white);
     }
 
     .nav__toggle {
@@ -786,7 +786,7 @@ img {
     .nav__toggle span {
         width: 25px;
         height: 3px;
-        background: var(--color-dark);
+        background: var(--color-white);
         border-radius: 2px;
         transition: var(--transition-fast);
     }
