@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="3D COACHING - Développez votre potentiel avec nos services de coaching, formation, recrutement et accompagnement entrepreneurial. Chaque talent compte, surtout le tien.">
+    <meta name="keywords"
+        content="coaching, formation professionnelle, recrutement, entrepreneuriat, coaching individuel, coaching collectif">
+    <meta name="author" content="3D COACHING">
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; img-src 'self' data:;">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="3D COACHING - Chaque talent compte, surtout le tien">
+    <meta property="og:description"
+        content="Services de coaching, formation, recrutement et accompagnement entrepreneurial">
+    <meta property="og:type" content="website">
+
+    <title>3D COACHING - Chaque talent compte, surtout le tien</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#accueil" class="nav__logo">
+                <img src="logo3d.jpeg" alt="3D COACHING Logo" class="nav__logo-img">
+                <h2>3D COACHING</h2>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#accueil" class="nav__link active">Accueil</a></li>
+                    <li class="nav__item"><a href="#apropos" class="nav__link">À Propos</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <span>&times;</span>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="accueil">
+        <div class="hero__container container">
+            <div class="hero__content">
+                <h1 class="hero__title">
+                    <span class="hero__title-main">3D COACHING</span>
+                    <span class="hero__subtitle">Chaque talent compte, surtout le tien.</span>
+                </h1>
+                <p class="hero__description">
+                    Développez votre potentiel et renforcez la performance de votre organisation avec nos solutions
+                    professionnelles innovantes.
+                </p>
+                <div class="hero__buttons">
+                    <a href="#services" class="btn btn-primary">Découvrir nos services</a>
+                    <a href="#contact" class="btn btn-secondary">Nous contacter</a>
+                </div>
+            </div>
+            <div class="hero__image">
+                <div class="hero__shape">
+                    <img src="logo3d.jpeg" alt="3D COACHING Logo" class="hero__logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="apropos">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">À Propos de Nous</h2>
+                <p class="section__subtitle">Votre partenaire pour la réussite professionnelle</p>
+            </div>
+
+            <div class="about__content">
+                <div class="about__text">
+                    <h3>Notre Mission</h3>
+                    <p>
+                        Nous développons le potentiel de chacun et renforçons la performance des organisations.
+                        Notre entreprise offre un ensemble de services intégrés destinés à développer les compétences
+                        des individus, renforcer les organisations, stimuler l'employabilité et soutenir
+                        l'entrepreneuriat.
+                    </p>
+                    <p>
+                        Avec une équipe d'experts, nous proposons des solutions professionnelles innovantes regroupant
+                        coaching, formation, recrutement et soutien entrepreneurial. Notre engagement : vous aider à
+                        réaliser votre plein potentiel.
+                    </p>
+                </div>
+
+                <div class="about__values">
+                    <div class="value-card">
+                        <div class="value-card__icon"><i class="bi bi-bullseye"></i></div>
+                        <h4>Excellence</h4>
+                        <p>Des services de qualité supérieure adaptés à vos besoins</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-card__icon"><i class="bi bi-people"></i></div>
+                        <h4>Accompagnement</h4>
+                        <p>Un soutien personnalisé à chaque étape de votre parcours</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-card__icon"><i class="bi bi-lightbulb"></i></div>
+                        <h4>Innovation</h4>
+                        <p>Des méthodes modernes et efficaces pour votre réussite</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section" id="services">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Nos Services</h2>
+                <p class="section__subtitle">Des solutions complètes pour votre développement</p>
+            </div>
+
+            <div class="services__grid">
+                <!-- Service 1: Coaching Individuel -->
+                <article class="service-card">
+                    <div class="service-card__icon"><i class="bi bi-person-check"></i></div>
+                    <h3 class="service-card__title">Coaching Individuel</h3>
+                    <p class="service-card__description">
+                        Nous accompagnons les personnes afin de renforcer leurs compétences personnelles et
+                        professionnelles.
+                    </p>
+                    <ul class="service-card__list">
+                        <li>Mieux comprendre son potentiel</li>
+                        <li>Développer ses capacités et ses talents</li>
+                        <li>Améliorer ses relations et sa communication</li>
+                        <li>Gérer le stress et les émotions</li>
+                        <li>S'orienter et évoluer professionnellement</li>
+                    </ul>
+                </article>
+
+                <!-- Service 2: Coaching Collectif -->
+                <article class="service-card">
+                    <div class="service-card__icon"><i class="bi bi-people-fill"></i></div>
+                    <h3 class="service-card__title">Coaching Collectif</h3>
+                    <p class="service-card__description">
+                        Accompagnement des groupes et équipes pour améliorer la collaboration et la performance
+                        collective.
+                    </p>
+                    <ul class="service-card__list">
+                        <li>Collaborer plus efficacement</li>
+                        <li>Coordonner les efforts autour d'un projet</li>
+                        <li>Clarifier les rôles et responsabilités</li>
+                        <li>Stimuler la créativité collective</li>
+                        <li>Développer un environnement positif</li>
+                    </ul>
+                </article>
+
+                <!-- Service 3: Coaching Professionnel -->
+                <article class="service-card">
+                    <div class="service-card__icon"><i class="bi bi-briefcase"></i></div>
+                    <h3 class="service-card__title">Coaching Professionnel</h3>
+                    <p class="service-card__description">
+                        Pour les salariés, cadres et dirigeants souhaitant évoluer dans leur carrière.
+                    </p>
+                    <ul class="service-card__list">
+                        <li>Développer les compétences managériales</li>
+                        <li>Surmonter les défis professionnels</li>
+                        <li>Améliorer la prise de décision</li>
+                        <li>Faciliter l'adaptation aux changements</li>
+                        <li>Optimiser les performances</li>
+                    </ul>
+                </article>
+
+                <!-- Service 4: Formation Professionnelle Continue -->
+                <article class="service-card">
+                    <div class="service-card__icon"><i class="bi bi-book"></i></div>
+                    <h3 class="service-card__title">Formation Professionnelle Continue</h3>
+                    <p class="service-card__description">
+                        Formations adaptées aux besoins du marché du travail et des organisations.
+                    </p>
+                    <ul class="service-card__list">
+                        <li>Acquérir de nouvelles compétences</li>
+                        <li>Se perfectionner dans son domaine</li>
+                        <li>Rester compétitif sur le marché</li>
+                        <li>Modules personnalisés</li>
+                        <li>Certifications reconnues</li>
+                    </ul>
+                </article>
+
+                <!-- Service 5: Publication d'Appels d'Offres -->
+                <article class="service-card">
+                    <div class="service-card__icon"><i class="bi bi-megaphone"></i></div>
+                    <h3 class="service-card__title">Publication d'Appels d'Offres</h3>
+                    <p class="service-card__description">
+                        Facilitation de l'accès aux opportunités économiques nationales et internationales.
+                    </p>
+                    <ul class="service-card__list">
+                        <li>Diffusion d'appels d'offres</li>
+                        <li>Veille des opportunités</li>
+                        <li>Accès aux marchés internationaux</li>
+                        <li>Information en temps réel</li>
+                        <li>Support à la candidature</li>
+                    </ul>
+                </article>
+
+                <!-- Service 6: Appui à l'Entrepreneuriat des Jeunes -->
+                <article class="service-card">
+                    <div class="service-card__icon"><i class="bi bi-rocket-takeoff"></i></div>
+                    <h3 class="service-card__title">Appui à l'Entrepreneuriat des Jeunes</h3>
+                    <p class="service-card__description">
+                        Soutien aux jeunes porteurs de projets pour favoriser l'innovation et la création d'emplois.
+                    </p>
+                    <ul class="service-card__list">
+                        <li>Mentorat personnalisé</li>
+                        <li>Formations entrepreneuriales</li>
+                        <li>Conseils techniques</li>
+                        <li>Développement de business plan</li>
+                        <li>Accompagnement au financement</li>
+                    </ul>
+                </article>
+
+                <!-- Service 7: Organisation d'Événements & Ateliers -->
+                <article class="service-card">
+                    <div class="service-card__icon"><i class="bi bi-calendar-event"></i></div>
+                    <h3 class="service-card__title">Organisation d'Événements & Ateliers Éducatifs</h3>
+                    <p class="service-card__description">
+                        Conférences, ateliers et séminaires pour sensibiliser et former le public.
+                    </p>
+                    <ul class="service-card__list">
+                        <li>Conférences thématiques</li>
+                        <li>Ateliers pratiques</li>
+                        <li>Séminaires professionnels</li>
+                        <li>Événements de networking</li>
+                        <li>Sessions de formation</li>
+                    </ul>
+                </article>
+
+                <!-- Service 8: Sélection et Recrutement -->
+                <article class="service-card">
+                    <div class="service-card__icon"><i class="bi bi-search"></i></div>
+                    <h3 class="service-card__title">Sélection et Recrutement de Personnel Qualifié</h3>
+                    <p class="service-card__description">
+                        Processus rigoureux pour garantir un recrutement efficace et adapté.
+                    </p>
+                    <ul class="service-card__list">
+                        <li>Analyse des besoins</li>
+                        <li>Tri et sélection des candidatures</li>
+                        <li>Entretiens professionnels</li>
+                        <li>Évaluation des compétences</li>
+                        <li>Recommandations qualifiées</li>
+                    </ul>
+                </article>
+
+                <!-- Service 9: Intérim et Placement Temporaire -->
+                <article class="service-card">
+                    <div class="service-card__icon"><i class="bi bi-clock-history"></i></div>
+                    <h3 class="service-card__title">Intérim et Placement Temporaire</h3>
+                    <p class="service-card__description">
+                        Personnel temporaire pour répondre aux besoins ponctuels des entreprises.
+                    </p>
+                    <ul class="service-card__list">
+                        <li>Flexibilité pour les employeurs</li>
+                        <li>Personnel qualifié disponible</li>
+                        <li>Missions courtes et longues durées</li>
+                        <li>Gestion administrative complète</li>
+                        <li>Opportunités pour les candidats</li>
+                    </ul>
+                </article>
+
+                <!-- Service 10: Préparation Entretien & CV -->
+                <article class="service-card">
+                    <div class="service-card__icon"><i class="bi bi-file-text"></i></div>
+                    <h3 class="service-card__title">Préparation à l'Entretien d'Embauche et à la Rédaction du CV</h3>
+                    <p class="service-card__description">
+                        Accompagnement pour maximiser les chances d'obtenir un emploi.
+                    </p>
+                    <ul class="service-card__list">
+                        <li>Optimisation du CV</li>
+                        <li>Rédaction de lettres de motivation</li>
+                        <li>Simulation d'entretiens</li>
+                        <li>Techniques de communication</li>
+                        <li>Conseils personnalisés</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Contactez-Nous</h2>
+                <p class="section__subtitle">Transformons vos ambitions en réalité</p>
+            </div>
+
+            <div class="contact__content">
+                <div class="contact__info">
+                    <h3>Parlons de votre projet</h3>
+                    <p>
+                        Notre équipe d'experts est à votre disposition pour répondre à vos questions
+                        et vous accompagner dans votre démarche.
+                    </p>
+
+                    <div class="contact__details">
+                        <div class="contact__item">
+                            <span class="contact__icon"><i class="bi bi-envelope"></i></span>
+                            <div>
+                                <h4>Email</h4>
+                                <p>3dcoaching26@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact__item">
+                            <span class="contact__icon"><i class="bi bi-telephone"></i></span>
+                            <div>
+                                <h4>Téléphone</h4>
+                                <p>+257 77 103 369</p>
+                            </div>
+                        </div>
+                        <div class="contact__item">
+                            <span class="contact__icon"><i class="bi bi-whatsapp"></i></span>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>+257 71 475 852</p>
+                            </div>
+                        </div>
+                        <div class="contact__item">
+                            <span class="contact__icon"><i class="bi bi-geo-alt"></i></span>
+                            <div>
+                                <h4>Adresse</h4>
+                                <p>Q. Kigobe Nord, Boulevard MWEZI GISABO tout près de l'Hôpital Roi Khaled, Avenue Swaa
+                                    Burundi en face de la Perle Hôtel dans les enceintes de CPR Physio center.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact__form" id="contact-form" name="contact" method="POST" data-netlify="true"
+                    data-netlify-honeypot="bot-field">
+                    <!-- Champ anti-spam caché -->
+                    <input type="hidden" name="form-name" value="contact">
+                    <p style="display: none;">
+                        <label>Ne pas remplir : <input name="bot-field"></label>
+                    </p>
+                    <input type="hidden" id="csrf-token" name="csrf_token">
+
+                    <div class="form__group">
+                        <label for="name" class="form__label">Nom complet *</label>
+                        <input type="text" id="name" name="name" class="form__input" required minlength="2"
+                            maxlength="100" pattern="[A-Za-zÀ-ÿ\s\-']+" aria-required="true" autocomplete="name">
+                        <span class="form__error" id="name-error"></span>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="email" class="form__label">Email *</label>
+                        <input type="email" id="email" name="email" class="form__input" required maxlength="100"
+                            aria-required="true" autocomplete="email">
+                        <span class="form__error" id="email-error"></span>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="phone" class="form__label">Téléphone</label>
+                        <input type="tel" id="phone" name="phone" class="form__input" maxlength="20"
+                            pattern="[\d\s\+\-\(\)]+" autocomplete="tel">
+                        <span class="form__error" id="phone-error"></span>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="service" class="form__label">Service souhaité *</label>
+                        <select id="service" name="service" class="form__input" required aria-required="true">
+                            <option value="">Sélectionnez un service</option>
+                            <option value="coaching-individuel">Coaching Individuel</option>
+                            <option value="coaching-collectif">Coaching Collectif</option>
+                            <option value="coaching-professionnel">Coaching Professionnel</option>
+                            <option value="formation">Formation Professionnelle Continue</option>
+                            <option value="appels-offres">Publication d'Appels d'Offres</option>
+                            <option value="entrepreneuriat">Appui à l'Entrepreneuriat</option>
+                            <option value="evenements">Organisation d'Événements</option>
+                            <option value="recrutement">Sélection et Recrutement</option>
+                            <option value="interim">Intérim et Placement Temporaire</option>
+                            <option value="cv-entretien">Préparation CV et Entretien</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                        <span class="form__error" id="service-error"></span>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="message" class="form__label">Message *</label>
+                        <textarea id="message" name="message" class="form__input form__textarea" required minlength="10"
+                            maxlength="1000" rows="5" aria-required="true"></textarea>
+                        <span class="form__error" id="message-error"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span class="btn-text">Envoyer le message</span>
+                        <span class="btn-loader" style="display: none;">Envoi en cours...</span>
+                    </button>
+
+                    <div class="form__message" id="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">3D COACHING</h3>
+                    <p class="footer__description">
+                        Chaque talent compte, surtout le tien. Développez votre potentiel avec nos solutions
+                        professionnelles.
+                    </p>
+                </div>
+
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Liens Rapides</h4>
+                    <ul class="footer__links">
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#apropos">À Propos</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Nos Services</h4>
+                    <ul class="footer__links">
+                        <li><a href="#services">Coaching</a></li>
+                        <li><a href="#services">Formation</a></li>
+                        <li><a href="#services">Recrutement</a></li>
+                        <li><a href="#services">Entrepreneuriat</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Contact</h4>
+                    <ul class="footer__links">
+                        <li><i class="bi bi-envelope"></i> 3dcoaching26@gmail.com</li>
+                        <li><i class="bi bi-telephone"></i> +257 77 103 369</li>
+                        <li><i class="bi bi-whatsapp"></i> +257 71 475 852</li>
+                        <li><i class="bi bi-geo-alt"></i> Q. Kigobe Nord, Bujumbura, Burundi</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; 2026 3D COACHING. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
