@@ -291,6 +291,7 @@ img {
     display: block;
     font-size: var(--fs-h1);
     font-weight: 700;
+    color: var(--color-white);
     margin-bottom: var(--spacing-sm);
     animation: fadeInUp 0.8s ease;
 }
@@ -299,6 +300,7 @@ img {
     display: block;
     font-size: var(--fs-h3);
     font-weight: 300;
+    color: var(--color-white);
     margin-bottom: var(--spacing-md);
     opacity: 0.95;
     animation: fadeInUp 0.8s ease 0.2s backwards;
