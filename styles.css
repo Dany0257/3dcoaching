@@ -490,9 +490,15 @@ img {
 }
 
 .service-card__description {
-    color: var(--color-dark-light);
-    margin-bottom: var(--spacing-sm);
     line-height: 1.7;
+}
+
+.service-card__catchphrase {
+    color: var(--color-dark);
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: var(--spacing-xs);
+    display: block;
 }
 
 .service-card__list {
