@@ -60,8 +60,17 @@ exports.handler = async (event) => {
 
     const { ADMIN_PASSWORD_HASH, SESSION_SECRET } = process.env;
     if (!ADMIN_PASSWORD_HASH || !SESSION_SECRET) {
+        // Diagnostic : on indique quels noms la fonction voit réellement.
+        // Uniquement des noms de variables, jamais leur contenu.
+        const attendues = ['ADMIN_PASSWORD_HASH', 'SESSION_SECRET', 'GITHUB_TOKEN', 'GITHUB_REPO'];
+        const vues = attendues.filter(nom => process.env[nom]);
+        const manquantes = attendues.filter(nom => !process.env[nom]);
+
         return reponse(500, {
-            erreur: "L'espace admin n'est pas encore configuré. Les variables ADMIN_PASSWORD_HASH et SESSION_SECRET doivent être ajoutées dans Netlify."
+            erreur: "L'espace admin n'est pas encore configuré dans Netlify."
+                + ` Variables manquantes : ${manquantes.join(', ')}.`
+                + ` Variables détectées : ${vues.length ? vues.join(', ') : 'aucune'}.`
+                + ` (${Object.keys(process.env).length} variables au total dans cet environnement.)`
         });
     }
 
