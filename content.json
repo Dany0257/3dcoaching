@@ -1,0 +1,237 @@
+{
+  "site": {
+    "titre": "3D COACHING - Chaque talent compte, surtout le tien",
+    "description": "3D COACHING - Développez votre potentiel avec nos services de coaching, formation et accompagnement entrepreneurial. Chaque talent compte, surtout le tien.",
+    "motsCles": "coaching, formation professionnelle, coaching enfants, leadership, développement personnel, entrepreneuriat, Bujumbura, Burundi"
+  },
+  "hero": {
+    "titre": "3D COACHING",
+    "slogan": "Chaque talent compte, surtout le tien.",
+    "description": "Développez votre potentiel et renforcez la performance de votre organisation avec nos solutions professionnelles innovantes.",
+    "boutonPrincipal": "Découvrir nos services",
+    "boutonSecondaire": "Nous contacter"
+  },
+  "apropos": {
+    "titre": "À Propos de Nous",
+    "sousTitre": "Votre partenaire pour la réussite personnelle et professionnelle",
+    "titreMission": "Notre Mission",
+    "paragraphes": [
+      "Nous développons le potentiel de chacun et renforçons la performance des organisations. Notre entreprise offre un ensemble de services intégrés destinés à développer les compétences des individus, renforcer les organisations, stimuler l'employabilité et soutenir l'entrepreneuriat.",
+      "Avec une équipe d'experts, nous proposons des solutions personnelles et professionnelles innovantes regroupant coaching, formation et soutien entrepreneurial. Notre engagement : vous aider à réaliser votre plein potentiel."
+    ],
+    "valeurs": [
+      {
+        "icone": "bullseye",
+        "titre": "Excellence",
+        "texte": "Des services de qualité supérieure adaptés à vos besoins"
+      },
+      {
+        "icone": "people",
+        "titre": "Accompagnement",
+        "texte": "Un soutien personnalisé à chaque étape de votre parcours"
+      },
+      {
+        "icone": "lightbulb",
+        "titre": "Innovation",
+        "texte": "Des méthodes modernes et efficaces pour votre réussite"
+      }
+    ]
+  },
+  "services": {
+    "titre": "Nos Services",
+    "sousTitre": "Des solutions complètes pour votre développement",
+    "liste": [
+      {
+        "id": "coaching-de-vie",
+        "icone": "person-check",
+        "titre": "Coaching de vie",
+        "description": "Nous accompagnons les personnes afin de renforcer leurs compétences personnelles et professionnelles.",
+        "points": [
+          "Mieux comprendre son potentiel",
+          "Développer ses capacités et ses talents",
+          "Améliorer ses relations et sa communication",
+          "Gérer le stress et les émotions",
+          "S'orienter et évoluer professionnellement"
+        ]
+      },
+      {
+        "id": "coaching-d-equipe",
+        "icone": "people-fill",
+        "titre": "Coaching d'équipe",
+        "description": "Accompagnement des groupes et équipes pour améliorer la collaboration et la performance collective.",
+        "points": [
+          "Collaborer plus efficacement",
+          "Coordonner les efforts autour d'un projet",
+          "Clarifier les rôles et responsabilités",
+          "Stimuler la créativité collective",
+          "Développer un environnement positif"
+        ]
+      },
+      {
+        "id": "coaching-de-carriere",
+        "icone": "compass",
+        "titre": "Coaching de carrière",
+        "description": "Accompagner toute personne en questionnement sur son avenir personnel et professionnel.",
+        "points": [
+          "Révéler les talents, les forces et les compétences",
+          "Aider dans l'orientation scolaire",
+          "Intervenir lors des moments clés de transition : reconversion, évolution, perte de repères ou envie de renouveau",
+          "Guider chaque personne vers une direction professionnelle alignée avec ses valeurs et son potentiel",
+          "Transmettre des outils concrets et puissants pour décider avec clarté et avancer avec impact"
+        ]
+      },
+      {
+        "id": "coaching-professionnel",
+        "icone": "briefcase",
+        "titre": "Coaching professionnel",
+        "description": "Pour les salariés, cadres et dirigeants souhaitant évoluer dans leur carrière.",
+        "points": [
+          "Développer les compétences managériales",
+          "Surmonter les défis professionnels",
+          "Améliorer la prise de décision",
+          "Faciliter l'adaptation aux changements",
+          "Optimiser les performances"
+        ]
+      },
+      {
+        "id": "coaching-parental",
+        "icone": "house-heart",
+        "titre": "Coaching parental",
+        "description": "Nous outillons les parents pour qu'ils deviennent les premiers révélateurs du leadership de leurs enfants, au quotidien et dès le plus jeune âge.",
+        "points": [
+          "Reconnaître le potentiel et les talents de son enfant",
+          "Adopter une posture éducative qui nourrit la confiance",
+          "Poser un cadre clair sans étouffer l'initiative",
+          "Encourager l'autonomie et le sens des responsabilités",
+          "Accompagner la scolarité et les choix d'orientation"
+        ]
+      },
+      {
+        "id": "coaching-enfants-adolescents",
+        "icone": "stars",
+        "titre": "Coaching des enfants de 7 à 18 ans",
+        "description": "Leadership, développement personnel et renforcement des compétences de vie, avec des méthodes adaptées à chaque âge.",
+        "points": [
+          "Prendre confiance en soi et oser s'exprimer",
+          "Développer l'esprit de leadership et le travail en équipe",
+          "Gérer ses émotions, le stress et les conflits",
+          "Renforcer la concentration et les méthodes de travail",
+          "Construire un projet scolaire et professionnel"
+        ]
+      },
+      {
+        "id": "coaching-entretiens-embauche",
+        "icone": "chat-dots",
+        "titre": "Coaching aux entretiens d'embauche",
+        "description": "Accompagnement pour maximiser vos chances de réussite lors de vos entretiens.",
+        "points": [
+          "Simulation d'entretiens",
+          "Techniques de communication",
+          "Gestion du stress",
+          "Mise en valeur de votre parcours",
+          "Conseils personnalisés"
+        ]
+      },
+      {
+        "id": "preparation-de-cv",
+        "icone": "file-text",
+        "titre": "Préparation de CV",
+        "description": "Optimisation et création de CV attractifs qui mettent en valeur vos compétences.",
+        "points": [
+          "Optimisation de la mise en page",
+          "Mise en adéquation avec les offres visées",
+          "Rédaction de lettres de motivation",
+          "Analyse de portefeuille de compétences"
+        ]
+      },
+      {
+        "id": "appui-entrepreneuriat-jeunes",
+        "icone": "rocket-takeoff",
+        "titre": "Appui à l'entrepreneuriat des jeunes",
+        "description": "Soutien aux jeunes porteurs de projets pour favoriser l'innovation et la création d'emplois.",
+        "points": [
+          "Mentorat personnalisé",
+          "Formations entrepreneuriales",
+          "Conseils techniques",
+          "Développement de business plan",
+          "Accompagnement au financement"
+        ]
+      },
+      {
+        "id": "organisation-evenements",
+        "icone": "calendar-event",
+        "titre": "Organisation d'événements",
+        "description": "Conférences, ateliers et séminaires pour sensibiliser et former le public.",
+        "points": [
+          "Conférences thématiques",
+          "Ateliers pratiques",
+          "Séminaires professionnels",
+          "Événements de networking",
+          "Sessions de formation"
+        ]
+      }
+    ]
+  },
+  "formations": {
+    "titre": "Formations Professionnelles",
+    "sousTitre": "Développez votre potentiel, boostez votre performance et passez au niveau supérieur grâce à nos formations pratiques, interactives et orientées résultats.",
+    "liste": [
+      {
+        "id": "formation-leadership",
+        "icone": "award",
+        "titre": "Formation en Leadership",
+        "accroche": "Devenez un leader inspirant et performant.",
+        "description": "Apprenez à mobiliser vos équipes, renforcer votre influence et prendre des décisions stratégiques avec assurance. Transformez votre manière de diriger et créez un impact durable."
+      },
+      {
+        "id": "formation-gestion-projets",
+        "icone": "clipboard-data",
+        "titre": "Formation en Planification et Gestion de Projets",
+        "accroche": "Maîtrisez vos projets de A à Z.",
+        "description": "Découvrez des outils concrets et des méthodes efficaces pour planifier, organiser et piloter vos projets avec succès, tout en respectant délais, budgets et objectifs."
+      },
+      {
+        "id": "formation-developpement-personnel",
+        "icone": "gem",
+        "titre": "Formation en Développement Personnel",
+        "accroche": "Libérez votre plein potentiel.",
+        "description": "Améliorez votre confiance en vous, votre communication et votre gestion des émotions pour atteindre vos ambitions professionnelles et personnelles."
+      },
+      {
+        "id": "formation-coaching-professionnel",
+        "icone": "mortarboard",
+        "titre": "Formation en Coaching Professionnel",
+        "accroche": "Devenez un accompagnateur du changement.",
+        "description": "Acquérez des techniques puissantes pour guider individus et équipes vers la réussite, favoriser la performance et révéler les talents."
+      }
+    ]
+  },
+  "realisations": {
+    "titre": "Nos Réalisations",
+    "sousTitre": "Ateliers, formations et accompagnements sur le terrain",
+    "afficher": true,
+    "photos": []
+  },
+  "contact": {
+    "titre": "Contactez-Nous",
+    "sousTitre": "Transformons vos ambitions en réalité",
+    "titreIntro": "Parlons de votre projet",
+    "intro": "Notre équipe d'experts est à votre disposition pour répondre à vos questions et vous accompagner dans votre démarche.",
+    "email": "contact@3dcoaching.business",
+    "telephone": "+257 77 103 369",
+    "whatsapp": "+257 71 475 852",
+    "adresse": "Q. Kigobe Nord, Boulevard MWEZI GISABO tout près de l'Hôpital Roi Khaled, Avenue Swaa Burundi en face de la Perle Hôtel dans les enceintes de CPR Physio center."
+  },
+  "pied": {
+    "description": "Chaque talent compte, surtout le tien. Développez votre potentiel avec nos solutions professionnelles.",
+    "liensServices": [
+      "Coaching",
+      "Formations",
+      "Enfants & familles",
+      "Entrepreneuriat"
+    ],
+    "copyright": "© 2026 3D COACHING. Tous droits réservés.",
+    "reseaux": []
+  },
+  "maj": "2026-08-25T09:00:00.000Z"
+}

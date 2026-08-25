@@ -4,44 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="3D COACHING - Développez votre potentiel avec nos services de coaching, formation, recrutement et accompagnement entrepreneurial. Chaque talent compte, surtout le tien.">
-    <meta name="keywords"
-        content="coaching, formation professionnelle, recrutement, entrepreneuriat, coaching individuel, coaching collectif">
+    <meta name="description" content="3D COACHING - Développez votre potentiel avec nos services de coaching, formation et accompagnement entrepreneurial. Chaque talent compte, surtout le tien.">
+    <meta name="keywords" content="coaching, formation professionnelle, coaching enfants, leadership, développement personnel, entrepreneuriat, Bujumbura, Burundi">
     <meta name="author" content="3D COACHING">
+    <meta name="theme-color" content="#0D1B3E">
 
-    <!-- Security Headers -->
-    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <!-- Sécurité -->
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; img-src 'self' data:;">
+        content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; img-src 'self' data:; form-action 'self'; base-uri 'self'; frame-ancestors 'self'">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
 
-    <!-- Open Graph / Social Media -->
+    <!-- Partage sur les réseaux sociaux -->
     <meta property="og:title" content="3D COACHING - Chaque talent compte, surtout le tien">
-    <meta property="og:description"
-        content="Services de coaching, formation, recrutement et accompagnement entrepreneurial">
+    <meta property="og:description" content="3D COACHING - Développez votre potentiel avec nos services de coaching, formation et accompagnement entrepreneurial. Chaque talent compte, surtout le tien.">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:image" content="logo3d.jpeg">
+    <meta name="twitter:card" content="summary">
 
     <title>3D COACHING - Chaque talent compte, surtout le tien</title>
+    <link rel="canonical" href="https://3dcoaching.business/">
+    <link rel="icon" href="logo3d.webp" type="image/webp">
 
-    <!-- Google Fonts -->
+    <!-- Polices : préconnexion pour démarrer le téléchargement au plus tôt -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
 
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Le logo apparaît dès le premier écran : on le télécharge en priorité -->
+    <link rel="preload" as="image" href="logo3d.webp" fetchpriority="high">
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- Styles intégrés à la page : aucun aller-retour réseau avant l'affichage -->
+    <style>:root{--color-primary:#C9A84C;--color-primary-dark:#A8893A;--color-primary-light:#E8C97A;--color-secondary:#0D1B3E;--color-accent:#C9A84C;--color-dark:#0D1B3E;--color-dark-light:#1A2F5A;--color-gray:#6B7280;--color-light-gray:#E5E7EB;--color-white:#FFFFFF;--color-bg:#F4F6FA;--gradient-primary:linear-gradient(135deg,#C9A84C 0%,#E8C97A 100%);--gradient-secondary:linear-gradient(135deg,#0D1B3E 0%,#1A2F5A 100%);--gradient-accent:linear-gradient(135deg,#C9A84C 0%,#E8C97A 100%);--gradient-hero:linear-gradient(135deg,#0D1B3E 0%,#1A2F5A 60%,#243B6E 100%);--font-primary:'Poppins',sans-serif;--font-secondary:'Inter',sans-serif;--fs-h1:3.5rem;--fs-h2:2.5rem;--fs-h3:1.75rem;--fs-h4:1.25rem;--fs-body:1rem;--fs-small:0.875rem;--spacing-xs:0.5rem;--spacing-sm:1rem;--spacing-md:2rem;--spacing-lg:4rem;--spacing-xl:6rem;--shadow-sm:0 1px 3px rgba(0,0,0,0.1);--shadow-md:0 4px 6px rgba(0,0,0,0.1);--shadow-lg:0 10px 25px rgba(0,0,0,0.15);--shadow-xl:0 20px 40px rgba(0,0,0,0.2);--transition-fast:0.2s ease;--transition-normal:0.3s ease;--transition-slow:0.5s ease;--radius-sm:0.375rem;--radius-md:0.75rem;--radius-lg:1rem;--radius-xl:1.5rem;--z-header:1000;--z-modal:2000}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;font-size:16px}body{font-family:var(--font-secondary);font-size:var(--fs-body);color:var(--color-dark);background-color:var(--color-bg);line-height:1.6;overflow-x:hidden}h1,h2,h3,h4,h5,h6{font-family:var(--font-primary);font-weight:700;line-height:1.2;color:var(--color-dark)}h1{font-size:var(--fs-h1)}h2{font-size:var(--fs-h2)}h3{font-size:var(--fs-h3)}h4{font-size:var(--fs-h4)}p{margin-bottom:var(--spacing-sm)}a{text-decoration:none;color:inherit;transition:var(--transition-normal)}ul{list-style:none}img{max-width:100%;height:auto;display:block}.container{max-width:1200px;margin:0 auto;padding:0 var(--spacing-md)}.section{padding:var(--spacing-xl) 0}.section__header{text-align:center;margin-bottom:var(--spacing-lg)}.section__title{margin-bottom:var(--spacing-sm);background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.section__subtitle{font-size:var(--fs-h4);color:var(--color-gray);font-weight:400}.header{position:fixed;top:0;left:0;width:100%;background-color:rgba(13,27,62,0.97);backdrop-filter:blur(10px);box-shadow:var(--shadow-sm);z-index:var(--z-header);transition:var(--transition-normal)}.header.scroll-header{box-shadow:var(--shadow-md)}.nav{display:flex;justify-content:space-between;align-items:center;height:4.5rem}.nav__logo{display:flex;align-items:center;gap:0.75rem}.nav__logo-img{height:40px;width:auto;border-radius:var(--radius-sm)}.nav__logo h2{background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-size:1.5rem}.nav__list{display:flex;gap:var(--spacing-md)}.nav__link{font-weight:500;color:var(--color-white);padding:var(--spacing-xs) var(--spacing-sm);border-radius:var(--radius-sm);transition:var(--transition-fast);position:relative}.nav__link::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:0;height:2px;background:var(--gradient-primary);transition:var(--transition-normal)}.nav__link:hover::after,.nav__link.active::after{width:80%}.nav__link:hover{color:var(--color-primary)}.nav__toggle,.nav__close{display:none}.hero{min-height:100vh;display:flex;align-items:center;background:#060E1F;position:relative;overflow:hidden;padding-top:4.5rem}#hero-canvas{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0}.hero__container{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:var(--spacing-lg);align-items:center}.hero__content{color:var(--color-white)}.hero__title-main{display:block;font-size:var(--fs-h1);font-weight:700;color:var(--color-white);margin-bottom:var(--spacing-sm);animation:fadeInUp 0.8s ease}.hero__subtitle{display:block;font-size:var(--fs-h3);font-weight:300;color:var(--color-white);margin-bottom:var(--spacing-md);opacity:0.95;animation:fadeInUp 0.8s ease 0.2s backwards}.hero__description{font-size:1.125rem;margin-bottom:var(--spacing-md);opacity:0.9;line-height:1.8;animation:fadeInUp 0.8s ease 0.4s backwards}.hero__buttons{display:flex;gap:var(--spacing-sm);flex-wrap:wrap;animation:fadeInUp 0.8s ease 0.6s backwards}.hero__image{position:relative;display:flex;justify-content:center;align-items:center}.hero__shape{width:400px;height:400px;background:rgba(255,255,255,0.1);border-radius:50%;backdrop-filter:blur(20px);border:2px solid rgba(255,255,255,0.2);animation:float 6s ease-in-out infinite;display:flex;align-items:center;justify-content:center;overflow:hidden}.hero__logo{width:80%;height:80%;object-fit:contain;border-radius:50%}.btn{display:inline-block;padding:0.875rem 2rem;border-radius:var(--radius-md);font-weight:600;font-family:var(--font-primary);transition:var(--transition-normal);cursor:pointer;border:none;font-size:var(--fs-body)}.btn-primary{background:var(--color-white);color:var(--color-primary);box-shadow:var(--shadow-md)}.btn-primary:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}.btn-secondary{background:transparent;color:var(--color-white);border:2px solid var(--color-white)}.btn-secondary:hover{background:var(--color-white);color:var(--color-primary)}.btn-submit{width:100%;margin-top:var(--spacing-sm)}.about__content{display:grid;grid-template-columns:1fr 1fr;gap:var(--spacing-lg);align-items:start}.about__text h3{color:var(--color-primary);margin-bottom:var(--spacing-sm)}.about__text p{color:var(--color-dark-light);line-height:1.8;margin-bottom:var(--spacing-md)}.about__values{display:flex;flex-direction:column;gap:var(--spacing-md)}.value-card{background:var(--color-white);padding:var(--spacing-md);border-radius:var(--radius-lg);box-shadow:var(--shadow-md);transition:var(--transition-normal)}.value-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}.value-card__icon{font-size:2.5rem;margin-bottom:var(--spacing-sm);color:var(--color-primary)}.value-card__icon i{display:block}.value-card h4{color:var(--color-primary);margin-bottom:var(--spacing-xs)}.value-card p{color:var(--color-gray);margin:0}.services{background:var(--color-white)}.services__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:var(--spacing-md)}.service-card{background:var(--color-bg);padding:var(--spacing-md);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);transition:var(--transition-normal);border:2px solid transparent}.service-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-xl);border-color:var(--color-primary-light)}.service-card__icon{font-size:3rem;margin-bottom:var(--spacing-sm);color:var(--color-primary)}.service-card__icon i{display:block}.service-card__title{color:var(--color-primary);margin-bottom:var(--spacing-sm);font-size:1.5rem}.service-card__description{line-height:1.7}.service-card__catchphrase{color:var(--color-dark);font-weight:600;font-style:italic;margin-bottom:var(--spacing-xs);display:block}.service-card__list{list-style:none;padding-left:0}.service-card__list li{color:var(--color-gray);padding:var(--spacing-xs) 0;padding-left:1.5rem;position:relative}.service-card__list li::before{content:'✓';position:absolute;left:0;color:var(--color-primary);font-weight:bold}.contact__content{display:grid;grid-template-columns:1fr 1.5fr;gap:var(--spacing-lg)}.contact__info h3{color:var(--color-primary);margin-bottom:var(--spacing-sm)}.contact__info p{color:var(--color-dark-light);line-height:1.8;margin-bottom:var(--spacing-md)}.contact__details{display:flex;flex-direction:column;gap:var(--spacing-md)}.contact__item{display:flex;align-items:start;gap:var(--spacing-sm)}.contact__icon{font-size:1.5rem;color:var(--color-primary)}.contact__icon i{display:block}.contact__item h4{color:var(--color-primary);margin-bottom:0.25rem}.contact__item p{color:var(--color-gray);margin:0}.contact__form{background:var(--color-white);padding:var(--spacing-md);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg)}.form__group{margin-bottom:var(--spacing-md)}.form__label{display:block;margin-bottom:var(--spacing-xs);font-weight:500;color:var(--color-dark)}.form__input,.form__textarea{width:100%;padding:0.875rem;border:2px solid var(--color-light-gray);border-radius:var(--radius-md);font-family:var(--font-secondary);font-size:var(--fs-body);transition:var(--transition-fast);background:var(--color-bg)}.form__input:focus,.form__textarea:focus{outline:none;border-color:var(--color-primary);background:var(--color-white)}.form__input.error{border-color:#EF4444}.form__error{display:block;color:#EF4444;font-size:var(--fs-small);margin-top:var(--spacing-xs)}.form__message{margin-top:var(--spacing-sm);padding:var(--spacing-sm);border-radius:var(--radius-md);text-align:center;font-weight:500;display:none}.form__message.success{background:#D1FAE5;color:#065F46;display:block}.form__message.error{background:#FEE2E2;color:#991B1B;display:block}.footer{background:var(--color-dark);color:var(--color-white);padding:var(--spacing-lg) 0 var(--spacing-md)}.footer__content{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:var(--spacing-lg);margin-bottom:var(--spacing-md)}.footer__title{background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:var(--spacing-sm)}.footer__subtitle{color:var(--color-white);margin-bottom:var(--spacing-sm)}.footer__description{color:var(--color-light-gray);line-height:1.7}.footer__links{display:flex;flex-direction:column;gap:var(--spacing-xs)}.footer__links a{color:var(--color-light-gray);transition:var(--transition-fast)}.footer__links a:hover{color:var(--color-primary-light);padding-left:var(--spacing-xs)}.footer__links li{color:var(--color-light-gray)}.footer__bottom{text-align:center;padding-top:var(--spacing-md);border-top:1px solid var(--color-dark-light);color:var(--color-light-gray)}.footer__bottom p{margin-bottom:var(--spacing-xs)}@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}@media screen and (max-width:968px){:root{--fs-h1:2.5rem;--fs-h2:2rem;--fs-h3:1.5rem}.hero__container,.about__content,.contact__content{grid-template-columns:1fr}.hero__shape{width:300px;height:300px}.services__grid{grid-template-columns:1fr}}@media screen and (max-width:768px){.nav__menu{position:fixed;top:0;right:-100%;width:80%;height:100vh;background:var(--color-dark);box-shadow:var(--shadow-xl);padding:var(--spacing-lg) var(--spacing-md);transition:var(--transition-normal)}.nav__menu.show-menu{right:0}.nav__list{flex-direction:column;gap:var(--spacing-md)}.nav__close{display:block;position:absolute;top:var(--spacing-sm);right:var(--spacing-md);font-size:2rem;cursor:pointer;color:var(--color-white)}.nav__toggle{display:flex;flex-direction:column;gap:0.25rem;cursor:pointer}.nav__toggle span{width:25px;height:3px;background:var(--color-white);border-radius:2px;transition:var(--transition-fast)}.hero__buttons{flex-direction:column}.btn{width:100%;text-align:center}}@media screen and (max-width:480px){:root{--fs-h1:2rem;--fs-h2:1.5rem;--spacing-lg:3rem;--spacing-xl:4rem}.container{padding:0 var(--spacing-sm)}.hero__shape{width:250px;height:250px}.gallery{grid-template-columns:repeat(2,1fr)}}.sprite{position:absolute;width:0;height:0;overflow:hidden}.ico{width:1em;height:1em;fill:currentColor;display:block;flex:none}.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.nav__toggle,.nav__close{background:none;border:none;color:inherit;font-family:inherit;padding:0}html{scroll-padding-top:6rem}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--color-primary);outline-offset:3px}.contact__item a:hover{color:var(--color-primary)}.footer__contact li{display:flex;align-items:start;gap:0.5rem}.footer__contact .ico{margin-top:0.35rem;color:var(--color-primary)}.footer__social{display:flex;gap:var(--spacing-sm);margin-top:var(--spacing-sm)}.footer__social-link{display:grid;place-items:center;width:2.25rem;height:2.25rem;font-size:1.15rem;border-radius:50%;color:var(--color-light-gray);background:rgba(255,255,255,0.07);transition:var(--transition-fast)}.footer__social-link:hover{background:var(--color-primary);color:var(--color-dark)}.realisations{background:var(--color-white)}.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:var(--spacing-sm)}.gallery__item{position:relative;display:block;width:100%;padding:0;border:none;border-radius:var(--radius-lg);overflow:hidden;cursor:zoom-in;background:var(--color-bg);box-shadow:var(--shadow-sm);transition:transform var(--transition-normal),box-shadow var(--transition-normal)}.gallery__item:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}.gallery__item img{width:100%;height:100%;aspect-ratio:4 / 3;object-fit:cover;display:block;background:var(--color-light-gray)}.gallery__caption{position:absolute;left:0;right:0;bottom:0;padding:2.25rem 1rem 0.9rem;font-family:var(--font-secondary);font-size:var(--fs-small);font-weight:500;color:var(--color-white);text-align:left;line-height:1.4;background:linear-gradient(to top,rgba(6,14,31,0.88) 30%,transparent)}.lightbox{position:fixed;inset:0;z-index:var(--z-modal);display:flex;align-items:center;justify-content:center;gap:var(--spacing-sm);padding:var(--spacing-md);background:rgba(6,14,31,0.94);backdrop-filter:blur(6px);animation:fadeIn var(--transition-normal)}.lightbox[hidden]{display:none}.lightbox__figure{max-width:min(1100px,92vw);max-height:88vh;margin:0;display:flex;flex-direction:column;gap:var(--spacing-sm);align-items:center}.lightbox__img{max-width:100%;max-height:78vh;width:auto;border-radius:var(--radius-md);box-shadow:var(--shadow-xl)}.lightbox__caption{color:var(--color-light-gray);text-align:center;font-size:var(--fs-body);max-width:60ch}.lightbox__close,.lightbox__nav{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:var(--color-white);cursor:pointer;border-radius:50%;display:grid;place-items:center;transition:var(--transition-fast);flex:none}.lightbox__nav{width:3rem;height:3rem;font-size:2rem;line-height:1;padding-bottom:0.25rem}.lightbox__close{position:absolute;top:var(--spacing-sm);right:var(--spacing-sm);width:2.75rem;height:2.75rem;font-size:1.75rem;line-height:1}.lightbox__close:hover,.lightbox__nav:hover{background:var(--color-primary);color:var(--color-dark);border-color:var(--color-primary)}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@media screen and (max-width:768px){.lightbox{padding:var(--spacing-sm)}.lightbox__nav{position:absolute;bottom:var(--spacing-md);width:3.25rem;height:3.25rem}.lightbox__prev{left:var(--spacing-md)}.lightbox__next{right:var(--spacing-md)}.lightbox__figure{max-width:100%}}@supports (height:100svh){.hero{min-height:100svh}}@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}.hero__shape{animation:none}}</style>
 </head>
 
 <body>
-    <!-- Header & Navigation -->
+    <svg class="sprite" aria-hidden="true" focusable="false"><defs><symbol id="i-award" viewBox="0 0 16 16"><path d="M9.669.864 8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68zm1.196 1.193.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702z"/> <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1z"/></symbol><symbol id="i-briefcase" viewBox="0 0 16 16"><path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5"/></symbol><symbol id="i-bullseye" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/> <path d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10m0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12"/> <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8"/> <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/></symbol><symbol id="i-calendar-event" viewBox="0 0 16 16"><path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/> <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/></symbol><symbol id="i-chat-dots" viewBox="0 0 16 16"><path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/> <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9 9 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.4 10.4 0 0 1-.524 2.318l-.003.011a11 11 0 0 1-.244.637c-.079.186.074.394.273.362a22 22 0 0 0 .693-.125m.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6-3.004 6-7 6a8 8 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a11 11 0 0 0 .398-2"/></symbol><symbol id="i-clipboard-data" viewBox="0 0 16 16"><path d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0z"/> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/> <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/></symbol><symbol id="i-compass" viewBox="0 0 16 16"><path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"/> <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"/></symbol><symbol id="i-envelope" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/></symbol><symbol id="i-file-text" viewBox="0 0 16 16"><path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5M5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1z"/> <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1"/></symbol><symbol id="i-gem" viewBox="0 0 16 16"><path d="M3.1.7a.5.5 0 0 1 .4-.2h9a.5.5 0 0 1 .4.2l2.976 3.974c.149.185.156.45.01.644L8.4 15.3a.5.5 0 0 1-.8 0L.1 5.3a.5.5 0 0 1 0-.6zm11.386 3.785-1.806-2.41-.776 2.413zm-3.633.004.961-2.989H4.186l.963 2.995zM5.47 5.495 8 13.366l2.532-7.876zm-1.371-.999-.78-2.422-1.818 2.425zM1.499 5.5l5.113 6.817-2.192-6.82zm7.889 6.817 5.123-6.83-2.928.002z"/></symbol><symbol id="i-geo-alt" viewBox="0 0 16 16"><path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/> <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/></symbol><symbol id="i-house-heart" viewBox="0 0 16 16"><path d="M8 6.982C9.664 5.309 13.825 8.236 8 12 2.175 8.236 6.336 5.309 8 6.982"/> <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.707L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.646a.5.5 0 0 0 .708-.707L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/></symbol><symbol id="i-lightbulb" viewBox="0 0 16 16"><path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1"/></symbol><symbol id="i-mortarboard" viewBox="0 0 16 16"><path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917zM8 8.46 1.758 5.965 8 3.052l6.242 2.913z"/> <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46z"/></symbol><symbol id="i-people" viewBox="0 0 16 16"><path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/></symbol><symbol id="i-people-fill" viewBox="0 0 16 16"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/></symbol><symbol id="i-person-check" viewBox="0 0 16 16"><path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/> <path d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z"/></symbol><symbol id="i-rocket-takeoff" viewBox="0 0 16 16"><path d="M9.752 6.193c.599.6 1.73.437 2.528-.362s.96-1.932.362-2.531c-.599-.6-1.73-.438-2.528.361-.798.8-.96 1.933-.362 2.532"/> <path d="M15.811 3.312c-.363 1.534-1.334 3.626-3.64 6.218l-.24 2.408a2.56 2.56 0 0 1-.732 1.526L8.817 15.85a.51.51 0 0 1-.867-.434l.27-1.899c.04-.28-.013-.593-.131-.956a9 9 0 0 0-.249-.657l-.082-.202c-.815-.197-1.578-.662-2.191-1.277-.614-.615-1.079-1.379-1.275-2.195l-.203-.083a10 10 0 0 0-.655-.248c-.363-.119-.675-.172-.955-.132l-1.896.27A.51.51 0 0 1 .15 7.17l2.382-2.386c.41-.41.947-.67 1.524-.734h.006l2.4-.238C9.005 1.55 11.087.582 12.623.208c.89-.217 1.59-.232 2.08-.188.244.023.435.06.57.093q.1.026.16.045c.184.06.279.13.351.295l.029.073a3.5 3.5 0 0 1 .157.721c.055.485.051 1.178-.159 2.065m-4.828 7.475.04-.04-.107 1.081a1.54 1.54 0 0 1-.44.913l-1.298 1.3.054-.38c.072-.506-.034-.993-.172-1.418a9 9 0 0 0-.164-.45c.738-.065 1.462-.38 2.087-1.006M5.205 5c-.625.626-.94 1.351-1.004 2.09a9 9 0 0 0-.45-.164c-.424-.138-.91-.244-1.416-.172l-.38.054 1.3-1.3c.245-.246.566-.401.91-.44l1.08-.107zm9.406-3.961c-.38-.034-.967-.027-1.746.163-1.558.38-3.917 1.496-6.937 4.521-.62.62-.799 1.34-.687 2.051.107.676.483 1.362 1.048 1.928.564.565 1.25.941 1.924 1.049.71.112 1.429-.067 2.048-.688 3.079-3.083 4.192-5.444 4.556-6.987.183-.771.18-1.345.138-1.713a3 3 0 0 0-.045-.283 3 3 0 0 0-.3-.041Z"/> <path d="M7.009 12.139a7.6 7.6 0 0 1-1.804-1.352A7.6 7.6 0 0 1 3.794 8.86c-1.102.992-1.965 5.054-1.839 5.18.125.126 3.936-.896 5.054-1.902Z"/></symbol><symbol id="i-stars" viewBox="0 0 16 16"><path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.73 1.73 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/></symbol><symbol id="i-telephone" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/></symbol><symbol id="i-whatsapp" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></symbol></defs></svg>
+
+    <!-- En-tête et navigation -->
     <header class="header" id="header">
-        <nav class="nav container">
+        <nav class="nav container" aria-label="Navigation principale">
             <a href="#accueil" class="nav__logo">
                 <h2>3D COACHING</h2>
             </a>
@@ -54,469 +58,372 @@
                     <li class="nav__item"><a href="#formations" class="nav__link">Formations</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
-                <div class="nav__close" id="nav-close">
+                <button class="nav__close" id="nav-close" type="button" aria-label="Fermer le menu">
                     <span>&times;</span>
-                </div>
+                </button>
             </div>
 
-            <div class="nav__toggle" id="nav-toggle">
+            <button class="nav__toggle" id="nav-toggle" type="button" aria-label="Ouvrir le menu"
+                aria-expanded="false" aria-controls="nav-menu">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="accueil">
-        <canvas id="hero-canvas"></canvas>
-        <div class="hero__container container">
-            <div class="hero__content">
-                <h1 class="hero__title">
-                    <span class="hero__title-main">3D COACHING</span>
-                    <span class="hero__subtitle">Chaque talent compte, surtout le tien.</span>
-                </h1>
-                <p class="hero__description">
-                    Développez votre potentiel et renforcez la performance de votre organisation avec nos solutions
-                    professionnelles innovantes.
-                </p>
-                <div class="hero__buttons">
-                    <a href="#services" class="btn btn-primary">Découvrir nos services</a>
-                    <a href="#contact" class="btn btn-secondary">Nous contacter</a>
+    <main>
+        <!-- Accueil -->
+        <section class="hero" id="accueil">
+            <canvas id="hero-canvas" aria-hidden="true"></canvas>
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        <span class="hero__title-main">3D COACHING</span>
+                        <span class="hero__subtitle">Chaque talent compte, surtout le tien.</span>
+                    </h1>
+                    <p class="hero__description">Développez votre potentiel et renforcez la performance de votre organisation avec nos solutions professionnelles innovantes.</p>
+                    <div class="hero__buttons">
+                        <a href="#services" class="btn btn-primary">Découvrir nos services</a>
+                        <a href="#contact" class="btn btn-secondary">Nous contacter</a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <div class="hero__shape">
+                        <img src="logo3d.webp" alt="Logo 3D COACHING" class="hero__logo" width="320" height="320"
+                            fetchpriority="high" decoding="async">
+                    </div>
                 </div>
             </div>
-            <div class="hero__image">
-                <div class="hero__shape">
-                    <img src="logo3d.jpeg" alt="3D COACHING Logo" class="hero__logo">
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section class="about section" id="apropos">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">À Propos de Nous</h2>
-                <p class="section__subtitle">Votre partenaire pour la réussite personnelle et professionnelle</p>
-            </div>
-
-            <div class="about__content">
-                <div class="about__text">
-                    <h3>Notre Mission</h3>
-                    <p>
-                        Nous développons le potentiel de chacun et renforçons la performance des organisations.
-                        Notre entreprise offre un ensemble de services intégrés destinés à développer les compétences
-                        des individus, renforcer les organisations, stimuler l'employabilité et soutenir
-                        l'entrepreneuriat.
-                    </p>
-                    <p>
-                        Avec une équipe d'experts, nous proposons des solutions personnelles et professionnelles
-                        innovantes regroupant
-                        coaching, formation, recrutement et soutien entrepreneurial. Notre engagement : vous aider à
-                        réaliser votre plein potentiel.
-                    </p>
+        <!-- À propos -->
+        <section class="about section" id="apropos">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">À Propos de Nous</h2>
+                    <p class="section__subtitle">Votre partenaire pour la réussite personnelle et professionnelle</p>
                 </div>
 
-                <div class="about__values">
+                <div class="about__content">
+                    <div class="about__text">
+                        <h3>Notre Mission</h3>
+                        <p>Nous développons le potentiel de chacun et renforçons la performance des organisations. Notre entreprise offre un ensemble de services intégrés destinés à développer les compétences des individus, renforcer les organisations, stimuler l'employabilité et soutenir l'entrepreneuriat.</p>
+                        <p>Avec une équipe d'experts, nous proposons des solutions personnelles et professionnelles innovantes regroupant coaching, formation et soutien entrepreneurial. Notre engagement : vous aider à réaliser votre plein potentiel.</p>
+                    </div>
+
+                    <div class="about__values">
                     <div class="value-card">
-                        <div class="value-card__icon"><i class="bi bi-bullseye"></i></div>
+                        <div class="value-card__icon"><svg class="ico" aria-hidden="true"><use href="#i-bullseye"></use></svg></div>
                         <h4>Excellence</h4>
                         <p>Des services de qualité supérieure adaptés à vos besoins</p>
                     </div>
                     <div class="value-card">
-                        <div class="value-card__icon"><i class="bi bi-people"></i></div>
+                        <div class="value-card__icon"><svg class="ico" aria-hidden="true"><use href="#i-people"></use></svg></div>
                         <h4>Accompagnement</h4>
                         <p>Un soutien personnalisé à chaque étape de votre parcours</p>
                     </div>
                     <div class="value-card">
-                        <div class="value-card__icon"><i class="bi bi-lightbulb"></i></div>
+                        <div class="value-card__icon"><svg class="ico" aria-hidden="true"><use href="#i-lightbulb"></use></svg></div>
                         <h4>Innovation</h4>
                         <p>Des méthodes modernes et efficaces pour votre réussite</p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services section" id="services">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Nos Services</h2>
-                <p class="section__subtitle">Des solutions complètes pour votre développement</p>
-            </div>
-
-            <div class="services__grid">
-                <!-- Service 1: Coaching de vie -->
-                <article class="service-card">
-                    <div class="service-card__icon"><i class="bi bi-person-check"></i></div>
-                    <h3 class="service-card__title">Coaching de vie</h3>
-                    <p class="service-card__description">
-                        Nous accompagnons les personnes afin de renforcer leurs compétences personnelles et
-                        professionnelles.
-                    </p>
-                    <ul class="service-card__list">
-                        <li>Mieux comprendre son potentiel</li>
-                        <li>Développer ses capacités et ses talents</li>
-                        <li>Améliorer ses relations et sa communication</li>
-                        <li>Gérer le stress et les émotions</li>
-                        <li>S'orienter et évoluer professionnellement</li>
-                    </ul>
-                </article>
-
-                <!-- Service 2: Coaching d’équipe -->
-                <article class="service-card">
-                    <div class="service-card__icon"><i class="bi bi-people-fill"></i></div>
-                    <h3 class="service-card__title">Coaching d’équipe</h3>
-                    <p class="service-card__description">
-                        Accompagnement des groupes et équipes pour améliorer la collaboration et la performance
-                        collective.
-                    </p>
-                    <ul class="service-card__list">
-                        <li>Collaborer plus efficacement</li>
-                        <li>Coordonner les efforts autour d'un projet</li>
-                        <li>Clarifier les rôles et responsabilités</li>
-                        <li>Stimuler la créativité collective</li>
-                        <li>Développer un environnement positif</li>
-                    </ul>
-                </article>
-
-                <!-- Service 3: Coaching de carrière -->
-                <article class="service-card">
-                    <div class="service-card__icon"><i class="bi bi-compass"></i></div>
-                    <h3 class="service-card__title">Coaching de carrière</h3>
-                    <p class="service-card__description">
-                        Accompagner toute personne en questionnement sur son avenir personnel et professionnel.
-                    </p>
-                    <ul class="service-card__list">
-                        <li>Révéler les talents, les forces et les compétences.</li>
-                        <li>Aider dans l'orientation scolaire.</li>
-                        <li>Intervenir lors des moments clés de transition : reconversion, évolution, perte de repères
-                            ou envie de renouveau.</li>
-                        <li>Guider chaque personne vers une direction professionnelle alignée avec ses valeurs et son
-                            potentiel.</li>
-                        <li>Transmettre des outils concrets et puissants pour décider avec clarté et avancer avec
-                            impact.</li>
-                    </ul>
-                </article>
-
-                <!-- Service 4: Coaching professionnel -->
-                <article class="service-card">
-                    <div class="service-card__icon"><i class="bi bi-briefcase"></i></div>
-                    <h3 class="service-card__title">Coaching professionnel</h3>
-                    <p class="service-card__description">
-                        Pour les salariés, cadres et dirigeants souhaitant évoluer dans leur carrière.
-                    </p>
-                    <ul class="service-card__list">
-                        <li>Développer les compétences managériales</li>
-                        <li>Surmonter les défis professionnels</li>
-                        <li>Améliorer la prise de décision</li>
-                        <li>Faciliter l'adaptation aux changements</li>
-                        <li>Optimiser les performances</li>
-                    </ul>
-                </article>
-
-
-
-                <!-- Service 6: Coaching aux entretiens d’embauche -->
-                <article class="service-card">
-                    <div class="service-card__icon"><i class="bi bi-chat-dots"></i></div>
-                    <h3 class="service-card__title">Coaching aux entretiens d’embauche</h3>
-                    <p class="service-card__description">
-                        Accompagnement pour maximiser vos chances de réussite lors de vos entretiens.
-                    </p>
-                    <ul class="service-card__list">
-                        <li>Simulation d'entretiens</li>
-                        <li>Techniques de communication</li>
-                        <li>Gestion du stress</li>
-                        <li>Mise en valeur de votre parcours</li>
-                        <li>Conseils personnalisés</li>
-                    </ul>
-                </article>
-
-                <!-- Service 7: Préparation de CV -->
-                <article class="service-card">
-                    <div class="service-card__icon"><i class="bi bi-file-text"></i></div>
-                    <h3 class="service-card__title">Préparation de CV</h3>
-                    <p class="service-card__description">
-                        Optimisation et création de CV attractifs qui mettent en valeur vos compétences.
-                    </p>
-                    <ul class="service-card__list">
-                        <li>Optimisation de la mise en page</li>
-                        <li>Mise en adéquation avec les offres visées</li>
-                        <li>Rédaction de lettres de motivation</li>
-                        <li>Analyse de portefeuille de compétences</li>
-                    </ul>
-                </article>
-
-                <!-- Service 8: Publication d’appels d’offres -->
-                <article class="service-card">
-                    <div class="service-card__icon"><i class="bi bi-megaphone"></i></div>
-                    <h3 class="service-card__title">Publication d’appels d’offres</h3>
-                    <p class="service-card__description">
-                        Facilitation de l'accès aux opportunités économiques nationales et internationales.
-                    </p>
-                    <ul class="service-card__list">
-                        <li>Diffusion d'appels d'offres</li>
-                        <li>Veille des opportunités</li>
-                        <li>Accès aux marchés internationaux</li>
-                        <li>Information en temps réel</li>
-                        <li>Support à la candidature</li>
-                    </ul>
-                </article>
-
-                <!-- Service 9: Appui à l’entrepreneuriat des jeunes -->
-                <article class="service-card">
-                    <div class="service-card__icon"><i class="bi bi-rocket-takeoff"></i></div>
-                    <h3 class="service-card__title">Appui à l’entrepreneuriat des jeunes</h3>
-                    <p class="service-card__description">
-                        Soutien aux jeunes porteurs de projets pour favoriser l'innovation et la création d'emplois.
-                    </p>
-                    <ul class="service-card__list">
-                        <li>Mentorat personnalisé</li>
-                        <li>Formations entrepreneuriales</li>
-                        <li>Conseils techniques</li>
-                        <li>Développement de business plan</li>
-                        <li>Accompagnement au financement</li>
-                    </ul>
-                </article>
-
-                <!-- Service 10: Organisation d’événements -->
-                <article class="service-card">
-                    <div class="service-card__icon"><i class="bi bi-calendar-event"></i></div>
-                    <h3 class="service-card__title">Organisation d’événements</h3>
-                    <p class="service-card__description">
-                        Conférences, ateliers et séminaires pour sensibiliser et former le public.
-                    </p>
-                    <ul class="service-card__list">
-                        <li>Conférences thématiques</li>
-                        <li>Ateliers pratiques</li>
-                        <li>Séminaires professionnels</li>
-                        <li>Événements de networking</li>
-                        <li>Sessions de formation</li>
-                    </ul>
-                </article>
-
-                <!-- Service 11: Sélection et recrutement du personnel qualifié -->
-                <article class="service-card">
-                    <div class="service-card__icon"><i class="bi bi-search"></i></div>
-                    <h3 class="service-card__title">Sélection et recrutement du personnel qualifié</h3>
-                    <p class="service-card__description">
-                        Processus rigoureux pour garantir un recrutement efficace et adapté.
-                    </p>
-                    <ul class="service-card__list">
-                        <li>Analyse des besoins</li>
-                        <li>Tri et sélection des candidatures</li>
-                        <li>Entretiens professionnels</li>
-                        <li>Évaluation des compétences</li>
-                        <li>Recommandations qualifiées</li>
-                    </ul>
-                </article>
-
-                <!-- Service 12: Intérim et placement temporaire de main-d’œuvre -->
-                <article class="service-card">
-                    <div class="service-card__icon"><i class="bi bi-clock-history"></i></div>
-                    <h3 class="service-card__title">Intérim et placement temporaire de main-d’œuvre</h3>
-                    <p class="service-card__description">
-                        Personnel temporaire pour répondre aux besoins ponctuels des entreprises.
-                    </p>
-                    <ul class="service-card__list">
-                        <li>Flexibilité pour les employeurs</li>
-                        <li>Personnel qualifié disponible</li>
-                        <li>Missions courtes et longues durées</li>
-                        <li>Gestion administrative complète</li>
-                        <li>Opportunités pour les candidats</li>
-                    </ul>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Formations Section -->
-    <section class="formations section" id="formations">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Formations Professionnelles</h2>
-                <p class="section__subtitle">Développez votre potentiel, boostez votre performance et passez au niveau
-                    supérieur grâce à nos formations pratiques, interactives et orientées résultats.</p>
-            </div>
-
-            <div class="services__grid">
-                <!-- Formation 1: Leadership -->
-                <article class="service-card">
-                    <div class="service-card__icon"><i class="bi bi-award"></i></div>
-                    <h3 class="service-card__title">Formation en Leadership</h3>
-                    <p class="service-card__catchphrase">Devenez un leader inspirant et performant.</p>
-                    <p class="service-card__description">
-                        Apprenez à mobiliser vos équipes, renforcer votre influence et prendre des décisions
-                        stratégiques avec assurance. Transformez votre manière de diriger et créez un impact durable.
-                    </p>
-                </article>
-
-                <!-- Formation 2: Planification et Gestion de Projets -->
-                <article class="service-card">
-                    <div class="service-card__icon"><i class="bi bi-clipboard-data"></i></div>
-                    <h3 class="service-card__title">Formation en Planification et Gestion de Projets</h3>
-                    <p class="service-card__catchphrase">Maîtrisez vos projets de A à Z.</p>
-                    <p class="service-card__description">
-                        Découvrez des outils concrets et des méthodes efficaces pour planifier, organiser et piloter vos
-                        projets avec succès, tout en respectant délais, budgets et objectifs.
-                    </p>
-                </article>
-
-                <!-- Formation 3: Développement Personnel -->
-                <article class="service-card">
-                    <div class="service-card__icon"><i class="bi bi-gem"></i></div>
-                    <h3 class="service-card__title">Formation en Développement Personnel</h3>
-                    <p class="service-card__catchphrase">Libérez votre plein potentiel.</p>
-                    <p class="service-card__description">
-                        Améliorez votre confiance en vous, votre communication et votre gestion des émotions pour
-                        atteindre vos ambitions professionnelles et personnelles.
-                    </p>
-                </article>
-
-                <!-- Formation 4: Coaching Professionnel -->
-                <article class="service-card">
-                    <div class="service-card__icon"><i class="bi bi-mortarboard"></i></div>
-                    <h3 class="service-card__title">Formation en Coaching Professionnel</h3>
-                    <p class="service-card__catchphrase">Devenez un accompagnateur du changement.</p>
-                    <p class="service-card__description">
-                        Acquérez des techniques puissantes pour guider individus et équipes vers la réussite, favoriser
-                        la performance et révéler les talents.
-                    </p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact section" id="contact">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Contactez-Nous</h2>
-                <p class="section__subtitle">Transformons vos ambitions en réalité</p>
-            </div>
-
-            <div class="contact__content">
-                <div class="contact__info">
-                    <h3>Parlons de votre projet</h3>
-                    <p>
-                        Notre équipe d'experts est à votre disposition pour répondre à vos questions
-                        et vous accompagner dans votre démarche.
-                    </p>
-
-                    <div class="contact__details">
-                        <div class="contact__item">
-                            <span class="contact__icon"><i class="bi bi-envelope"></i></span>
-                            <div>
-                                <h4>Email</h4>
-                                <p>contact@3dcoaching.business</p>
-                            </div>
-                        </div>
-                        <div class="contact__item">
-                            <span class="contact__icon"><i class="bi bi-telephone"></i></span>
-                            <div>
-                                <h4>Téléphone</h4>
-                                <p>+257 77 103 369</p>
-                            </div>
-                        </div>
-                        <div class="contact__item">
-                            <span class="contact__icon"><i class="bi bi-whatsapp"></i></span>
-                            <div>
-                                <h4>WhatsApp</h4>
-                                <p>+257 71 475 852</p>
-                            </div>
-                        </div>
-                        <div class="contact__item">
-                            <span class="contact__icon"><i class="bi bi-geo-alt"></i></span>
-                            <div>
-                                <h4>Adresse</h4>
-                                <p>Q. Kigobe Nord, Boulevard MWEZI GISABO tout près de l'Hôpital Roi Khaled, Avenue Swaa
-                                    Burundi en face de la Perle Hôtel dans les enceintes de CPR Physio center.</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
-
-                <form class="contact__form" id="contact-form" name="contact" method="POST" data-netlify="true"
-                    data-netlify-honeypot="bot-field">
-                    <!-- Champ anti-spam caché -->
-                    <input type="hidden" name="form-name" value="contact">
-                    <p style="display: none;">
-                        <label>Ne pas remplir : <input name="bot-field"></label>
-                    </p>
-                    <input type="hidden" id="csrf-token" name="csrf_token">
-
-                    <div class="form__group">
-                        <label for="name" class="form__label">Nom complet *</label>
-                        <input type="text" id="name" name="name" class="form__input" required minlength="2"
-                            maxlength="100" pattern="[A-Za-zÀ-ÿ\s\-']+" aria-required="true" autocomplete="name">
-                        <span class="form__error" id="name-error"></span>
-                    </div>
-
-                    <div class="form__group">
-                        <label for="email" class="form__label">Email *</label>
-                        <input type="email" id="email" name="email" class="form__input" required maxlength="100"
-                            aria-required="true" autocomplete="email">
-                        <span class="form__error" id="email-error"></span>
-                    </div>
-
-                    <div class="form__group">
-                        <label for="phone" class="form__label">Téléphone</label>
-                        <input type="tel" id="phone" name="phone" class="form__input" maxlength="20"
-                            pattern="[\d\s\+\-\(\)]+" autocomplete="tel">
-                        <span class="form__error" id="phone-error"></span>
-                    </div>
-
-                    <div class="form__group">
-                        <label for="service" class="form__label">Service souhaité *</label>
-                        <select id="service" name="service" class="form__input" required aria-required="true">
-                            <option value="">Sélectionnez un service</option>
-                            <option value="coaching-individuel">Coaching Individuel</option>
-                            <option value="coaching-collectif">Coaching Collectif</option>
-                            <option value="coaching-professionnel">Coaching Professionnel</option>
-                            <option value="coaching-carriere">Coaching de Carrière</option>
-                            <option value="formation">Formation Professionnelle</option>
-                            <option value="appels-offres">Publication d'Appels d'Offres</option>
-                            <option value="entrepreneuriat">Appui à l'Entrepreneuriat</option>
-                            <option value="evenements">Organisation d'Événements</option>
-                            <option value="recrutement">Sélection et Recrutement</option>
-                            <option value="interim">Intérim et Placement Temporaire de main d'oeuvre</option>
-                            <option value="cv-entretien">Préparation CV et Entretien</option>
-                            <option value="autre">Autre</option>
-                        </select>
-                        <span class="form__error" id="service-error"></span>
-                    </div>
-
-                    <div class="form__group">
-                        <label for="message" class="form__label">Message *</label>
-                        <textarea id="message" name="message" class="form__input form__textarea" required minlength="10"
-                            maxlength="1000" rows="5" aria-required="true"></textarea>
-                        <span class="form__error" id="message-error"></span>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary btn-submit">
-                        <span class="btn-text">Envoyer le message</span>
-                        <span class="btn-loader" style="display: none;">Envoi en cours...</span>
-                    </button>
-
-                    <div class="form__message" id="form-message"></div>
-                </form>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+        <!-- Services -->
+        <section class="services section" id="services">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Nos Services</h2>
+                    <p class="section__subtitle">Des solutions complètes pour votre développement</p>
+                </div>
+
+                <div class="services__grid">
+                    <article class="service-card">
+                        <div class="service-card__icon"><svg class="ico" aria-hidden="true"><use href="#i-person-check"></use></svg></div>
+                        <h3 class="service-card__title">Coaching de vie</h3>
+                        <p class="service-card__description">Nous accompagnons les personnes afin de renforcer leurs compétences personnelles et professionnelles.</p>
+                        <ul class="service-card__list">
+                            <li>Mieux comprendre son potentiel</li>
+                            <li>Développer ses capacités et ses talents</li>
+                            <li>Améliorer ses relations et sa communication</li>
+                            <li>Gérer le stress et les émotions</li>
+                            <li>S'orienter et évoluer professionnellement</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card__icon"><svg class="ico" aria-hidden="true"><use href="#i-people-fill"></use></svg></div>
+                        <h3 class="service-card__title">Coaching d'équipe</h3>
+                        <p class="service-card__description">Accompagnement des groupes et équipes pour améliorer la collaboration et la performance collective.</p>
+                        <ul class="service-card__list">
+                            <li>Collaborer plus efficacement</li>
+                            <li>Coordonner les efforts autour d'un projet</li>
+                            <li>Clarifier les rôles et responsabilités</li>
+                            <li>Stimuler la créativité collective</li>
+                            <li>Développer un environnement positif</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card__icon"><svg class="ico" aria-hidden="true"><use href="#i-compass"></use></svg></div>
+                        <h3 class="service-card__title">Coaching de carrière</h3>
+                        <p class="service-card__description">Accompagner toute personne en questionnement sur son avenir personnel et professionnel.</p>
+                        <ul class="service-card__list">
+                            <li>Révéler les talents, les forces et les compétences</li>
+                            <li>Aider dans l'orientation scolaire</li>
+                            <li>Intervenir lors des moments clés de transition : reconversion, évolution, perte de repères ou envie de renouveau</li>
+                            <li>Guider chaque personne vers une direction professionnelle alignée avec ses valeurs et son potentiel</li>
+                            <li>Transmettre des outils concrets et puissants pour décider avec clarté et avancer avec impact</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card__icon"><svg class="ico" aria-hidden="true"><use href="#i-briefcase"></use></svg></div>
+                        <h3 class="service-card__title">Coaching professionnel</h3>
+                        <p class="service-card__description">Pour les salariés, cadres et dirigeants souhaitant évoluer dans leur carrière.</p>
+                        <ul class="service-card__list">
+                            <li>Développer les compétences managériales</li>
+                            <li>Surmonter les défis professionnels</li>
+                            <li>Améliorer la prise de décision</li>
+                            <li>Faciliter l'adaptation aux changements</li>
+                            <li>Optimiser les performances</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card__icon"><svg class="ico" aria-hidden="true"><use href="#i-house-heart"></use></svg></div>
+                        <h3 class="service-card__title">Coaching parental</h3>
+                        <p class="service-card__description">Nous outillons les parents pour qu'ils deviennent les premiers révélateurs du leadership de leurs enfants, au quotidien et dès le plus jeune âge.</p>
+                        <ul class="service-card__list">
+                            <li>Reconnaître le potentiel et les talents de son enfant</li>
+                            <li>Adopter une posture éducative qui nourrit la confiance</li>
+                            <li>Poser un cadre clair sans étouffer l'initiative</li>
+                            <li>Encourager l'autonomie et le sens des responsabilités</li>
+                            <li>Accompagner la scolarité et les choix d'orientation</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card__icon"><svg class="ico" aria-hidden="true"><use href="#i-stars"></use></svg></div>
+                        <h3 class="service-card__title">Coaching des enfants de 7 à 18 ans</h3>
+                        <p class="service-card__description">Leadership, développement personnel et renforcement des compétences de vie, avec des méthodes adaptées à chaque âge.</p>
+                        <ul class="service-card__list">
+                            <li>Prendre confiance en soi et oser s'exprimer</li>
+                            <li>Développer l'esprit de leadership et le travail en équipe</li>
+                            <li>Gérer ses émotions, le stress et les conflits</li>
+                            <li>Renforcer la concentration et les méthodes de travail</li>
+                            <li>Construire un projet scolaire et professionnel</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card__icon"><svg class="ico" aria-hidden="true"><use href="#i-chat-dots"></use></svg></div>
+                        <h3 class="service-card__title">Coaching aux entretiens d'embauche</h3>
+                        <p class="service-card__description">Accompagnement pour maximiser vos chances de réussite lors de vos entretiens.</p>
+                        <ul class="service-card__list">
+                            <li>Simulation d'entretiens</li>
+                            <li>Techniques de communication</li>
+                            <li>Gestion du stress</li>
+                            <li>Mise en valeur de votre parcours</li>
+                            <li>Conseils personnalisés</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card__icon"><svg class="ico" aria-hidden="true"><use href="#i-file-text"></use></svg></div>
+                        <h3 class="service-card__title">Préparation de CV</h3>
+                        <p class="service-card__description">Optimisation et création de CV attractifs qui mettent en valeur vos compétences.</p>
+                        <ul class="service-card__list">
+                            <li>Optimisation de la mise en page</li>
+                            <li>Mise en adéquation avec les offres visées</li>
+                            <li>Rédaction de lettres de motivation</li>
+                            <li>Analyse de portefeuille de compétences</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card__icon"><svg class="ico" aria-hidden="true"><use href="#i-rocket-takeoff"></use></svg></div>
+                        <h3 class="service-card__title">Appui à l'entrepreneuriat des jeunes</h3>
+                        <p class="service-card__description">Soutien aux jeunes porteurs de projets pour favoriser l'innovation et la création d'emplois.</p>
+                        <ul class="service-card__list">
+                            <li>Mentorat personnalisé</li>
+                            <li>Formations entrepreneuriales</li>
+                            <li>Conseils techniques</li>
+                            <li>Développement de business plan</li>
+                            <li>Accompagnement au financement</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card__icon"><svg class="ico" aria-hidden="true"><use href="#i-calendar-event"></use></svg></div>
+                        <h3 class="service-card__title">Organisation d'événements</h3>
+                        <p class="service-card__description">Conférences, ateliers et séminaires pour sensibiliser et former le public.</p>
+                        <ul class="service-card__list">
+                            <li>Conférences thématiques</li>
+                            <li>Ateliers pratiques</li>
+                            <li>Séminaires professionnels</li>
+                            <li>Événements de networking</li>
+                            <li>Sessions de formation</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formations -->
+        <section class="formations section" id="formations">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Formations Professionnelles</h2>
+                    <p class="section__subtitle">Développez votre potentiel, boostez votre performance et passez au niveau supérieur grâce à nos formations pratiques, interactives et orientées résultats.</p>
+                </div>
+
+                <div class="services__grid">
+                    <article class="service-card">
+                        <div class="service-card__icon"><svg class="ico" aria-hidden="true"><use href="#i-award"></use></svg></div>
+                        <h3 class="service-card__title">Formation en Leadership</h3>
+                        <p class="service-card__catchphrase">Devenez un leader inspirant et performant.</p>
+                        <p class="service-card__description">Apprenez à mobiliser vos équipes, renforcer votre influence et prendre des décisions stratégiques avec assurance. Transformez votre manière de diriger et créez un impact durable.</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card__icon"><svg class="ico" aria-hidden="true"><use href="#i-clipboard-data"></use></svg></div>
+                        <h3 class="service-card__title">Formation en Planification et Gestion de Projets</h3>
+                        <p class="service-card__catchphrase">Maîtrisez vos projets de A à Z.</p>
+                        <p class="service-card__description">Découvrez des outils concrets et des méthodes efficaces pour planifier, organiser et piloter vos projets avec succès, tout en respectant délais, budgets et objectifs.</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card__icon"><svg class="ico" aria-hidden="true"><use href="#i-gem"></use></svg></div>
+                        <h3 class="service-card__title">Formation en Développement Personnel</h3>
+                        <p class="service-card__catchphrase">Libérez votre plein potentiel.</p>
+                        <p class="service-card__description">Améliorez votre confiance en vous, votre communication et votre gestion des émotions pour atteindre vos ambitions professionnelles et personnelles.</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card__icon"><svg class="ico" aria-hidden="true"><use href="#i-mortarboard"></use></svg></div>
+                        <h3 class="service-card__title">Formation en Coaching Professionnel</h3>
+                        <p class="service-card__catchphrase">Devenez un accompagnateur du changement.</p>
+                        <p class="service-card__description">Acquérez des techniques puissantes pour guider individus et équipes vers la réussite, favoriser la performance et révéler les talents.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Contactez-Nous</h2>
+                    <p class="section__subtitle">Transformons vos ambitions en réalité</p>
+                </div>
+
+                <div class="contact__content">
+                    <div class="contact__info">
+                        <h3>Parlons de votre projet</h3>
+                        <p>Notre équipe d'experts est à votre disposition pour répondre à vos questions et vous accompagner dans votre démarche.</p>
+
+                        <div class="contact__details">
+                            <div class="contact__item">
+                                <span class="contact__icon"><svg class="ico" aria-hidden="true"><use href="#i-envelope"></use></svg></span>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p><a href="mailto:contact@3dcoaching.business">contact@3dcoaching.business</a></p>
+                                </div>
+                            </div>
+                            <div class="contact__item">
+                                <span class="contact__icon"><svg class="ico" aria-hidden="true"><use href="#i-telephone"></use></svg></span>
+                                <div>
+                                    <h4>Téléphone</h4>
+                                    <p><a href="tel:+25777103369">+257 77 103 369</a></p>
+                                </div>
+                            </div>
+                            <div class="contact__item">
+                                <span class="contact__icon"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"></use></svg></span>
+                                <div>
+                                    <h4>WhatsApp</h4>
+                                    <p><a href="https://wa.me/25771475852" rel="noopener">+257 71 475 852</a></p>
+                                </div>
+                            </div>
+                            <div class="contact__item">
+                                <span class="contact__icon"><svg class="ico" aria-hidden="true"><use href="#i-geo-alt"></use></svg></span>
+                                <div>
+                                    <h4>Adresse</h4>
+                                    <p>Q. Kigobe Nord, Boulevard MWEZI GISABO tout près de l'Hôpital Roi Khaled, Avenue Swaa Burundi en face de la Perle Hôtel dans les enceintes de CPR Physio center.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact__form" id="contact-form" name="contact" method="POST" data-netlify="true"
+                        data-netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="contact">
+                        <p class="visually-hidden">
+                            <label>Ne pas remplir : <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+                        </p>
+                        <input type="hidden" id="csrf-token" name="csrf_token">
+
+                        <div class="form__group">
+                            <label for="name" class="form__label">Nom complet *</label>
+                            <input type="text" id="name" name="name" class="form__input" required minlength="2"
+                                maxlength="100" pattern="[A-Za-zÀ-ÿ\s\-']+" aria-required="true" autocomplete="name">
+                            <span class="form__error" id="name-error"></span>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="email" class="form__label">Email *</label>
+                            <input type="email" id="email" name="email" class="form__input" required maxlength="100"
+                                aria-required="true" autocomplete="email">
+                            <span class="form__error" id="email-error"></span>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="phone" class="form__label">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" class="form__input" maxlength="20"
+                                pattern="[\d\s\+\-\(\)]+" autocomplete="tel">
+                            <span class="form__error" id="phone-error"></span>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="service" class="form__label">Service souhaité *</label>
+                            <select id="service" name="service" class="form__input" required aria-required="true">
+                                <option value="">Sélectionnez un service</option>
+                                <option value="coaching-de-vie">Coaching de vie</option>
+                                <option value="coaching-d-equipe">Coaching d'équipe</option>
+                                <option value="coaching-de-carriere">Coaching de carrière</option>
+                                <option value="coaching-professionnel">Coaching professionnel</option>
+                                <option value="coaching-parental">Coaching parental</option>
+                                <option value="coaching-enfants-adolescents">Coaching des enfants de 7 à 18 ans</option>
+                                <option value="coaching-entretiens-embauche">Coaching aux entretiens d'embauche</option>
+                                <option value="preparation-de-cv">Préparation de CV</option>
+                                <option value="appui-entrepreneuriat-jeunes">Appui à l'entrepreneuriat des jeunes</option>
+                                <option value="organisation-evenements">Organisation d'événements</option>
+                                <option value="formation">Formation professionnelle</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                            <span class="form__error" id="service-error"></span>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="message" class="form__label">Message *</label>
+                            <textarea id="message" name="message" class="form__input form__textarea" required
+                                minlength="10" maxlength="1000" rows="5" aria-required="true"></textarea>
+                            <span class="form__error" id="message-error"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span class="btn-text">Envoyer le message</span>
+                            <span class="btn-loader" style="display: none;">Envoi en cours...</span>
+                        </button>
+
+                        <div class="form__message" id="form-message" role="status" aria-live="polite"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
     <footer class="footer">
         <div class="container">
             <div class="footer__content">
                 <div class="footer__section">
                     <h3 class="footer__title">3D COACHING</h3>
-                    <p class="footer__description">
-                        Chaque talent compte, surtout le tien. Développez votre potentiel avec nos solutions
-                        professionnelles.
-                    </p>
+                    <p class="footer__description">Chaque talent compte, surtout le tien. Développez votre potentiel avec nos solutions professionnelles.</p>
+
                 </div>
 
                 <div class="footer__section">
@@ -525,6 +432,7 @@
                         <li><a href="#accueil">Accueil</a></li>
                         <li><a href="#apropos">À Propos</a></li>
                         <li><a href="#services">Services</a></li>
+                        <li><a href="#formations">Formations</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -533,31 +441,43 @@
                     <h4 class="footer__subtitle">Nos Services</h4>
                     <ul class="footer__links">
                         <li><a href="#services">Coaching</a></li>
-                        <li><a href="#services">Formation</a></li>
-                        <li><a href="#services">Recrutement</a></li>
+                        <li><a href="#services">Formations</a></li>
+                        <li><a href="#services">Enfants &amp; familles</a></li>
                         <li><a href="#services">Entrepreneuriat</a></li>
                     </ul>
                 </div>
 
                 <div class="footer__section">
                     <h4 class="footer__subtitle">Contact</h4>
-                    <ul class="footer__links">
-                        <li><i class="bi bi-envelope"></i> contact@3dcoaching.business</li>
-                        <li><i class="bi bi-telephone"></i> +257 77 103 369</li>
-                        <li><i class="bi bi-whatsapp"></i> +257 71 475 852</li>
-                        <li><i class="bi bi-geo-alt"></i> Q. Kigobe Nord, Bujumbura, Burundi</li>
+                    <ul class="footer__links footer__contact">
+                        <li><svg class="ico" aria-hidden="true"><use href="#i-envelope"></use></svg> contact@3dcoaching.business</li>
+                        <li><svg class="ico" aria-hidden="true"><use href="#i-telephone"></use></svg> +257 77 103 369</li>
+                        <li><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"></use></svg> +257 71 475 852</li>
+                        <li><svg class="ico" aria-hidden="true"><use href="#i-geo-alt"></use></svg> Q. Kigobe Nord, Bujumbura, Burundi</li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer__bottom">
-                <p>&copy; 2026 3D COACHING. Tous droits réservés.</p>
+                <p>© 2026 3D COACHING. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+    <!-- Visionneuse de photos -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo agrandie" hidden>
+        <button class="lightbox__close" id="lightbox-close" type="button" aria-label="Fermer">&times;</button>
+        <button class="lightbox__nav lightbox__prev" id="lightbox-prev" type="button" aria-label="Photo précédente">&#8249;</button>
+        <figure class="lightbox__figure">
+            <img class="lightbox__img" id="lightbox-img" src="" alt="">
+            <figcaption class="lightbox__caption" id="lightbox-caption"></figcaption>
+        </figure>
+        <button class="lightbox__nav lightbox__next" id="lightbox-next" type="button" aria-label="Photo suivante">&#8250;</button>
+    </div>
+
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"3D COACHING","slogan":"Chaque talent compte, surtout le tien.","description":"3D COACHING - Développez votre potentiel avec nos services de coaching, formation et accompagnement entrepreneurial. Chaque talent compte, surtout le tien.","url":"https://3dcoaching.business/","image":"https://3dcoaching.business/logo3d.jpeg","email":"contact@3dcoaching.business","telephone":"+257 77 103 369","address":{"@type":"PostalAddress","streetAddress":"Q. Kigobe Nord, Boulevard MWEZI GISABO tout près de l'Hôpital Roi Khaled, Avenue Swaa Burundi en face de la Perle Hôtel dans les enceintes de CPR Physio center.","addressLocality":"Bujumbura","addressCountry":"BI"},"areaServed":"BI","makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Coaching de vie","description":"Nous accompagnons les personnes afin de renforcer leurs compétences personnelles et professionnelles."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Coaching d'équipe","description":"Accompagnement des groupes et équipes pour améliorer la collaboration et la performance collective."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Coaching de carrière","description":"Accompagner toute personne en questionnement sur son avenir personnel et professionnel."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Coaching professionnel","description":"Pour les salariés, cadres et dirigeants souhaitant évoluer dans leur carrière."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Coaching parental","description":"Nous outillons les parents pour qu'ils deviennent les premiers révélateurs du leadership de leurs enfants, au quotidien et dès le plus jeune âge."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Coaching des enfants de 7 à 18 ans","description":"Leadership, développement personnel et renforcement des compétences de vie, avec des méthodes adaptées à chaque âge."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Coaching aux entretiens d'embauche","description":"Accompagnement pour maximiser vos chances de réussite lors de vos entretiens."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Préparation de CV","description":"Optimisation et création de CV attractifs qui mettent en valeur vos compétences."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Appui à l'entrepreneuriat des jeunes","description":"Soutien aux jeunes porteurs de projets pour favoriser l'innovation et la création d'emplois."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Organisation d'événements","description":"Conférences, ateliers et séminaires pour sensibiliser et former le public."}}]}</script>
+    <script src="script.js" defer></script>
+    <script src="hero.js" defer></script>
 </body>
 
 </html>

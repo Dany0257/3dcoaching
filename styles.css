@@ -825,4 +825,306 @@ img {
         width: 250px;
         height: 250px;
     }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===================================================================
+   ICÔNES SVG
+   Intégrées directement dans la page : aucune police d'icônes à
+   télécharger, aucun appel à un serveur extérieur.
+   =================================================================== */
+
+.sprite {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.ico {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    display: block;
+    flex: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Les boutons du menu héritent des styles du site */
+.nav__toggle,
+.nav__close {
+    background: none;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    padding: 0;
+}
+
+/* Ancres : le titre visé ne passe plus sous l'en-tête fixe */
+html {
+    scroll-padding-top: 6rem;
+}
+
+/* Accessibilité : la navigation au clavier reste visible */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+.contact__item a:hover {
+    color: var(--color-primary);
+}
+
+.footer__contact li {
+    display: flex;
+    align-items: start;
+    gap: 0.5rem;
+}
+
+.footer__contact .ico {
+    margin-top: 0.35rem;
+    color: var(--color-primary);
+}
+
+.footer__social {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+}
+
+.footer__social-link {
+    display: grid;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 1.15rem;
+    border-radius: 50%;
+    color: var(--color-light-gray);
+    background: rgba(255, 255, 255, 0.07);
+    transition: var(--transition-fast);
+}
+
+.footer__social-link:hover {
+    background: var(--color-primary);
+    color: var(--color-dark);
+}
+
+/* ===================================================================
+   NOS RÉALISATIONS — galerie photos
+   =================================================================== */
+
+.realisations {
+    background: var(--color-white);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: var(--spacing-sm);
+}
+
+.gallery__item {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    cursor: zoom-in;
+    background: var(--color-bg);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.gallery__item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.gallery__item img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    background: var(--color-light-gray);
+}
+
+.gallery__caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2.25rem 1rem 0.9rem;
+    font-family: var(--font-secondary);
+    font-size: var(--fs-small);
+    font-weight: 500;
+    color: var(--color-white);
+    text-align: left;
+    line-height: 1.4;
+    background: linear-gradient(to top, rgba(6, 14, 31, 0.88) 30%, transparent);
+}
+
+/* Visionneuse plein écran */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-modal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    background: rgba(6, 14, 31, 0.94);
+    backdrop-filter: blur(6px);
+    animation: fadeIn var(--transition-normal);
+}
+
+.lightbox[hidden] {
+    display: none;
+}
+
+.lightbox__figure {
+    max-width: min(1100px, 92vw);
+    max-height: 88vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: center;
+}
+
+.lightbox__img {
+    max-width: 100%;
+    max-height: 78vh;
+    width: auto;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-xl);
+}
+
+.lightbox__caption {
+    color: var(--color-light-gray);
+    text-align: center;
+    font-size: var(--fs-body);
+    max-width: 60ch;
+}
+
+.lightbox__close,
+.lightbox__nav {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--color-white);
+    cursor: pointer;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: var(--transition-fast);
+    flex: none;
+}
+
+.lightbox__nav {
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    line-height: 1;
+    padding-bottom: 0.25rem;
+}
+
+.lightbox__close {
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 1.75rem;
+    line-height: 1;
+}
+
+.lightbox__close:hover,
+.lightbox__nav:hover {
+    background: var(--color-primary);
+    color: var(--color-dark);
+    border-color: var(--color-primary);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .lightbox {
+        padding: var(--spacing-sm);
+    }
+
+    .lightbox__nav {
+        position: absolute;
+        bottom: var(--spacing-md);
+        width: 3.25rem;
+        height: 3.25rem;
+    }
+
+    .lightbox__prev {
+        left: var(--spacing-md);
+    }
+
+    .lightbox__next {
+        right: var(--spacing-md);
+    }
+
+    .lightbox__figure {
+        max-width: 100%;
+    }
+}
+
+/* ===================================================================
+   CONFORT DE LECTURE ET ANIMATIONS
+   =================================================================== */
+
+/* Hauteur d'écran fiable sur mobile (barre d'adresse qui se replie) */
+@supports (height: 100svh) {
+    .hero {
+        min-height: 100svh;
+    }
+}
+
+/* Respect du réglage « réduire les animations » du système */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .hero__shape {
+        animation: none;
+    }
 }

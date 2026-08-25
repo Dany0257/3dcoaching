@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{SITE_DESCRIPTION}}">
+    <meta name="keywords" content="{{SITE_KEYWORDS}}">
+    <meta name="author" content="3D COACHING">
+    <meta name="theme-color" content="#0D1B3E">
+
+    <!-- Sécurité -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; img-src 'self' data:; form-action 'self'; base-uri 'self'; frame-ancestors 'self'">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <!-- Partage sur les réseaux sociaux -->
+    <meta property="og:title" content="{{SITE_TITLE}}">
+    <meta property="og:description" content="{{SITE_DESCRIPTION}}">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:image" content="logo3d.jpeg">
+    <meta name="twitter:card" content="summary">
+
+    <title>{{SITE_TITLE}}</title>
+    <link rel="canonical" href="https://3dcoaching.business/">
+    <link rel="icon" href="logo3d.webp" type="image/webp">
+
+    <!-- Polices : préconnexion pour démarrer le téléchargement au plus tôt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Le logo apparaît dès le premier écran : on le télécharge en priorité -->
+    <link rel="preload" as="image" href="logo3d.webp" fetchpriority="high">
+
+    <!-- Styles intégrés à la page : aucun aller-retour réseau avant l'affichage -->
+    <style>{{STYLES}}</style>
+</head>
+
+<body>
+    {{SPRITE}}
+
+    <!-- En-tête et navigation -->
+    <header class="header" id="header">
+        <nav class="nav container" aria-label="Navigation principale">
+            <a href="#accueil" class="nav__logo">
+                <h2>3D COACHING</h2>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#accueil" class="nav__link active">Accueil</a></li>
+                    <li class="nav__item"><a href="#apropos" class="nav__link">À Propos</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="#formations" class="nav__link">Formations</a></li>
+{{NAV_REALISATIONS}}                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+                <button class="nav__close" id="nav-close" type="button" aria-label="Fermer le menu">
+                    <span>&times;</span>
+                </button>
+            </div>
+
+            <button class="nav__toggle" id="nav-toggle" type="button" aria-label="Ouvrir le menu"
+                aria-expanded="false" aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Accueil -->
+        <section class="hero" id="accueil">
+            <canvas id="hero-canvas" aria-hidden="true"></canvas>
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        <span class="hero__title-main">{{HERO_TITRE}}</span>
+                        <span class="hero__subtitle">{{HERO_SLOGAN}}</span>
+                    </h1>
+                    <p class="hero__description">{{HERO_DESCRIPTION}}</p>
+                    <div class="hero__buttons">
+                        <a href="#services" class="btn btn-primary">{{HERO_BTN1}}</a>
+                        <a href="#contact" class="btn btn-secondary">{{HERO_BTN2}}</a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <div class="hero__shape">
+                        <img src="logo3d.webp" alt="Logo 3D COACHING" class="hero__logo" width="320" height="320"
+                            fetchpriority="high" decoding="async">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- À propos -->
+        <section class="about section" id="apropos">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">{{APROPOS_TITRE}}</h2>
+                    <p class="section__subtitle">{{APROPOS_SOUSTITRE}}</p>
+                </div>
+
+                <div class="about__content">
+                    <div class="about__text">
+                        <h3>{{APROPOS_TITRE_MISSION}}</h3>
+{{APROPOS_PARAGRAPHES}}
+                    </div>
+
+                    <div class="about__values">
+{{APROPOS_VALEURS}}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="services section" id="services">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">{{SERVICES_TITRE}}</h2>
+                    <p class="section__subtitle">{{SERVICES_SOUSTITRE}}</p>
+                </div>
+
+                <div class="services__grid">
+{{SERVICES_CARTES}}
+                </div>
+            </div>
+        </section>
+
+        <!-- Formations -->
+        <section class="formations section" id="formations">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">{{FORMATIONS_TITRE}}</h2>
+                    <p class="section__subtitle">{{FORMATIONS_SOUSTITRE}}</p>
+                </div>
+
+                <div class="services__grid">
+{{FORMATIONS_CARTES}}
+                </div>
+            </div>
+        </section>
+
+{{SECTION_REALISATIONS}}
+        <!-- Contact -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">{{CONTACT_TITRE}}</h2>
+                    <p class="section__subtitle">{{CONTACT_SOUSTITRE}}</p>
+                </div>
+
+                <div class="contact__content">
+                    <div class="contact__info">
+                        <h3>{{CONTACT_TITRE_INTRO}}</h3>
+                        <p>{{CONTACT_INTRO}}</p>
+
+                        <div class="contact__details">
+                            <div class="contact__item">
+                                <span class="contact__icon"><svg class="ico" aria-hidden="true"><use href="#i-envelope"></use></svg></span>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p><a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a></p>
+                                </div>
+                            </div>
+                            <div class="contact__item">
+                                <span class="contact__icon"><svg class="ico" aria-hidden="true"><use href="#i-telephone"></use></svg></span>
+                                <div>
+                                    <h4>Téléphone</h4>
+                                    <p><a href="tel:{{CONTACT_TEL_LIEN}}">{{CONTACT_TEL}}</a></p>
+                                </div>
+                            </div>
+                            <div class="contact__item">
+                                <span class="contact__icon"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"></use></svg></span>
+                                <div>
+                                    <h4>WhatsApp</h4>
+                                    <p><a href="https://wa.me/{{CONTACT_WA_LIEN}}" rel="noopener">{{CONTACT_WA}}</a></p>
+                                </div>
+                            </div>
+                            <div class="contact__item">
+                                <span class="contact__icon"><svg class="ico" aria-hidden="true"><use href="#i-geo-alt"></use></svg></span>
+                                <div>
+                                    <h4>Adresse</h4>
+                                    <p>{{CONTACT_ADRESSE}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact__form" id="contact-form" name="contact" method="POST" data-netlify="true"
+                        data-netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="contact">
+                        <p class="visually-hidden">
+                            <label>Ne pas remplir : <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+                        </p>
+                        <input type="hidden" id="csrf-token" name="csrf_token">
+
+                        <div class="form__group">
+                            <label for="name" class="form__label">Nom complet *</label>
+                            <input type="text" id="name" name="name" class="form__input" required minlength="2"
+                                maxlength="100" pattern="[A-Za-zÀ-ÿ\s\-']+" aria-required="true" autocomplete="name">
+                            <span class="form__error" id="name-error"></span>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="email" class="form__label">Email *</label>
+                            <input type="email" id="email" name="email" class="form__input" required maxlength="100"
+                                aria-required="true" autocomplete="email">
+                            <span class="form__error" id="email-error"></span>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="phone" class="form__label">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" class="form__input" maxlength="20"
+                                pattern="[\d\s\+\-\(\)]+" autocomplete="tel">
+                            <span class="form__error" id="phone-error"></span>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="service" class="form__label">Service souhaité *</label>
+                            <select id="service" name="service" class="form__input" required aria-required="true">
+                                <option value="">Sélectionnez un service</option>
+{{FORM_OPTIONS}}
+                            </select>
+                            <span class="form__error" id="service-error"></span>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="message" class="form__label">Message *</label>
+                            <textarea id="message" name="message" class="form__input form__textarea" required
+                                minlength="10" maxlength="1000" rows="5" aria-required="true"></textarea>
+                            <span class="form__error" id="message-error"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span class="btn-text">Envoyer le message</span>
+                            <span class="btn-loader" style="display: none;">Envoi en cours...</span>
+                        </button>
+
+                        <div class="form__message" id="form-message" role="status" aria-live="polite"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">3D COACHING</h3>
+                    <p class="footer__description">{{PIED_DESCRIPTION}}</p>
+{{PIED_RESEAUX}}
+                </div>
+
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Liens Rapides</h4>
+                    <ul class="footer__links">
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#apropos">À Propos</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#formations">Formations</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Nos Services</h4>
+                    <ul class="footer__links">
+{{PIED_LIENS_SERVICES}}
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Contact</h4>
+                    <ul class="footer__links footer__contact">
+                        <li><svg class="ico" aria-hidden="true"><use href="#i-envelope"></use></svg> {{CONTACT_EMAIL}}</li>
+                        <li><svg class="ico" aria-hidden="true"><use href="#i-telephone"></use></svg> {{CONTACT_TEL}}</li>
+                        <li><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"></use></svg> {{CONTACT_WA}}</li>
+                        <li><svg class="ico" aria-hidden="true"><use href="#i-geo-alt"></use></svg> Q. Kigobe Nord, Bujumbura, Burundi</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>{{PIED_COPYRIGHT}}</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Visionneuse de photos -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo agrandie" hidden>
+        <button class="lightbox__close" id="lightbox-close" type="button" aria-label="Fermer">&times;</button>
+        <button class="lightbox__nav lightbox__prev" id="lightbox-prev" type="button" aria-label="Photo précédente">&#8249;</button>
+        <figure class="lightbox__figure">
+            <img class="lightbox__img" id="lightbox-img" src="" alt="">
+            <figcaption class="lightbox__caption" id="lightbox-caption"></figcaption>
+        </figure>
+        <button class="lightbox__nav lightbox__next" id="lightbox-next" type="button" aria-label="Photo suivante">&#8250;</button>
+    </div>
+
+    <script type="application/ld+json">{{JSONLD}}</script>
+    <script src="script.js" defer></script>
+    <script src="hero.js" defer></script>
+</body>
+
+</html>

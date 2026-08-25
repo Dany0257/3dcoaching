@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; img-src 'self' data: blob:; connect-src 'self'; base-uri 'self'">
+
+    <title>Espace admin — 3D COACHING</title>
+
+    <link rel="icon" href="../logo3d.webp" type="image/webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- ============================ CONNEXION ============================ -->
+    <div class="connexion" id="connexion">
+        <form class="connexion__carte" id="form-connexion" autocomplete="on">
+            <img src="../logo3d.webp" alt="" class="connexion__logo" width="72" height="72">
+            <h1 class="connexion__titre">Espace admin</h1>
+            <p class="connexion__soustitre">Gestion du contenu du site 3D COACHING</p>
+
+            <label class="champ">
+                <span class="champ__label">Mot de passe</span>
+                <input type="password" id="mot-de-passe" name="password" class="champ__saisie"
+                    autocomplete="current-password" required autofocus>
+            </label>
+
+            <button type="submit" class="bouton bouton--or bouton--large" id="btn-connexion">Se connecter</button>
+
+            <p class="message message--erreur" id="erreur-connexion" hidden></p>
+            <p class="connexion__aide">Vous avez oublié le mot de passe ? Contactez la personne qui gère le site.</p>
+        </form>
+    </div>
+
+    <!-- ============================== ESPACE ============================= -->
+    <div class="app" id="app" hidden>
+
+        <header class="entete">
+            <div class="entete__marque">
+                <img src="../logo3d.webp" alt="" width="34" height="34">
+                <div>
+                    <strong>3D COACHING</strong>
+                    <span>Espace admin</span>
+                </div>
+            </div>
+            <div class="entete__actions">
+                <span class="entete__etat" id="etat-modifs">Aucune modification</span>
+                <button type="button" class="bouton bouton--fantome" id="btn-deconnexion">Se déconnecter</button>
+            </div>
+        </header>
+
+        <nav class="onglets" id="onglets" aria-label="Sections modifiables">
+            <button type="button" class="onglet actif" data-onglet="services">Services</button>
+            <button type="button" class="onglet" data-onglet="photos">Photos</button>
+            <button type="button" class="onglet" data-onglet="formations">Formations</button>
+            <button type="button" class="onglet" data-onglet="textes">Textes &amp; contact</button>
+        </nav>
+
+        <main class="contenu">
+
+            <!-- ---------------------------- SERVICES ---------------------------- -->
+            <section class="panneau actif" id="panneau-services">
+                <div class="panneau__entete">
+                    <div>
+                        <h2>Nos services</h2>
+                        <p class="panneau__aide">Ce que l'entreprise propose. Ces services apparaissent aussi dans la
+                            liste déroulante du formulaire de contact.</p>
+                    </div>
+                    <button type="button" class="bouton bouton--or" data-ajouter="services">+ Ajouter un service</button>
+                </div>
+                <div class="liste" id="liste-services"></div>
+            </section>
+
+            <!-- ----------------------------- PHOTOS ----------------------------- -->
+            <section class="panneau" id="panneau-photos">
+                <div class="panneau__entete">
+                    <div>
+                        <h2>Nos réalisations</h2>
+                        <p class="panneau__aide">Les photos de vos ateliers, formations et accompagnements. Elles sont
+                            réduites automatiquement pour que le site reste rapide.</p>
+                    </div>
+                </div>
+
+                <label class="depot" id="depot">
+                    <input type="file" id="fichier-photos" accept="image/*" multiple hidden>
+                    <span class="depot__icone">+</span>
+                    <span class="depot__titre">Glissez vos photos ici</span>
+                    <span class="depot__aide">ou cliquez pour les choisir · JPG, PNG ou WEBP</span>
+                </label>
+
+                <div class="galerie" id="liste-photos"></div>
+                <p class="vide" id="photos-vide">Aucune photo pour l'instant. La section « Nos réalisations »
+                    n'apparaîtra sur le site qu'une fois la première photo ajoutée.</p>
+            </section>
+
+            <!-- --------------------------- FORMATIONS --------------------------- -->
+            <section class="panneau" id="panneau-formations">
+                <div class="panneau__entete">
+                    <div>
+                        <h2>Formations professionnelles</h2>
+                        <p class="panneau__aide">Le catalogue de formations, avec sa phrase d'accroche.</p>
+                    </div>
+                    <button type="button" class="bouton bouton--or" data-ajouter="formations">+ Ajouter une
+                        formation</button>
+                </div>
+                <div class="liste" id="liste-formations"></div>
+            </section>
+
+            <!-- ----------------------------- TEXTES ----------------------------- -->
+            <section class="panneau" id="panneau-textes">
+                <div class="panneau__entete">
+                    <div>
+                        <h2>Textes &amp; coordonnées</h2>
+                        <p class="panneau__aide">Le slogan d'accueil, la présentation de l'entreprise et les moyens de
+                            vous joindre.</p>
+                    </div>
+                </div>
+                <div class="formulaire" id="form-textes"></div>
+            </section>
+
+        </main>
+
+        <footer class="barre">
+            <span class="barre__etat" id="barre-etat">Tout est publié</span>
+            <div class="barre__actions">
+                <button type="button" class="bouton bouton--fantome" id="btn-apercu">Aperçu</button>
+                <button type="button" class="bouton bouton--or" id="btn-publier">Publier</button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- =========================== FENÊTRE ÉDITION ======================== -->
+    <div class="modale" id="modale" hidden>
+        <div class="modale__boite" role="dialog" aria-modal="true" aria-labelledby="modale-titre">
+            <div class="modale__entete">
+                <h3 id="modale-titre">Modifier</h3>
+                <button type="button" class="modale__fermer" id="modale-fermer" aria-label="Fermer">&times;</button>
+            </div>
+            <div class="modale__corps" id="modale-corps"></div>
+            <div class="modale__pied">
+                <button type="button" class="bouton bouton--fantome" id="modale-annuler">Annuler</button>
+                <button type="button" class="bouton bouton--or" id="modale-valider">Enregistrer</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================== APERÇU ============================== -->
+    <div class="modale modale--large" id="apercu" hidden>
+        <div class="modale__boite" role="dialog" aria-modal="true" aria-label="Aperçu du site">
+            <div class="modale__entete">
+                <h3>Aperçu — voici ce que verront les visiteurs</h3>
+                <button type="button" class="modale__fermer" id="apercu-fermer" aria-label="Fermer">&times;</button>
+            </div>
+            <iframe class="apercu__cadre" id="apercu-cadre" title="Aperçu du site"></iframe>
+        </div>
+    </div>
+
+    <!-- ============================ PUBLICATION =========================== -->
+    <div class="modale" id="publication" hidden>
+        <div class="modale__boite modale__boite--etroite" role="dialog" aria-modal="true" aria-live="polite">
+            <div class="modale__corps modale__corps--centre">
+                <div class="rond" id="publication-rond"></div>
+                <h3 id="publication-titre">Publication en cours…</h3>
+                <p id="publication-texte">Envoi des modifications.</p>
+                <div class="progression"><span id="progression-barre"></span></div>
+                <button type="button" class="bouton bouton--or" id="publication-ok" hidden>Terminé</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification" hidden></div>
+
+    <script src="../icons.js"></script>
+    <script src="admin.js"></script>
+</body>
+
+</html>

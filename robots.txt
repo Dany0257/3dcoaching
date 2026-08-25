@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /outils/
+Disallow: /template.html
+Disallow: /build.js
+
+Sitemap: https://3dcoaching.business/sitemap.xml
