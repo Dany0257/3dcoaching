@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+<!--
+    ┌──────────────────────────────────────────────────────────────────────┐
+    │  GABARIT DU SITE — ne pas reformater automatiquement                 │
+    │                                                                      │
+    │  Les repères en majuscules entre doubles accolades sont remplacés    │
+    │  par build.js à partir de content.json. Un formateur automatique     │
+    │  (VS Code « Format Document », Prettier) peut les déformer et        │
+    │  casser le site.                                                     │
+    │                                                                      │
+    │  Les repères sensibles sont écrits en commentaire HTML, hors des     │
+    │  balises <style> et <script>, précisément pour résister à cela.      │
+    └──────────────────────────────────────────────────────────────────────┘
+-->
 <html lang="fr">
 
 <head>
@@ -19,12 +32,19 @@
     <meta property="og:description" content="{{SITE_DESCRIPTION}}">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
-    <meta property="og:image" content="logo3d.jpeg">
+    <meta property="og:image" content="https://3dcoaching.business/logo-3dcoaching.png">
+    <meta property="og:url" content="https://3dcoaching.business/">
+    <meta property="og:site_name" content="3D COACHING">
     <meta name="twitter:card" content="summary">
 
     <title>{{SITE_TITLE}}</title>
     <link rel="canonical" href="https://3dcoaching.business/">
-    <link rel="icon" href="logo3d.webp" type="image/webp">
+
+    <!-- Icône du site : c'est elle que Google affiche à côté du résultat de
+         recherche. Format PNG carré, l'emblème seul pour rester lisible en 16 px. -->
+    <link rel="icon" href="favicon-96.png" sizes="96x96" type="image/png">
+    <link rel="icon" href="favicon-192.png" sizes="192x192" type="image/png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <!-- Polices : préconnexion pour démarrer le téléchargement au plus tôt -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,14 +56,10 @@
     <!-- Le logo apparaît dès le premier écran : on le télécharge en priorité -->
     <link rel="preload" as="image" href="logo3d.webp" fetchpriority="high">
 
-    <!-- Styles intégrés à la page : aucun aller-retour réseau avant l'affichage -->
-    <style>
-        {
-                {
-                STYLES
-            }
-        }
-    </style>
+    <!-- Styles intégrés à la page : aucun aller-retour réseau avant l'affichage.
+         Le repère ci-dessous est un commentaire : build.js le remplace par la
+         balise <style> complète. Écrit ainsi, aucun formateur ne peut le casser. -->
+    <!--{{STYLES}}-->
 </head>
 
 <body>
@@ -62,15 +78,15 @@
                     <li class="nav__item"><a href="#apropos" class="nav__link">À Propos</a></li>
                     <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
                     <li class="nav__item"><a href="#formations" class="nav__link">Formations</a></li>
-                    {{NAV_REALISATIONS}} <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+{{NAV_REALISATIONS}}                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
                 <button class="nav__close" id="nav-close" type="button" aria-label="Fermer le menu">
                     <span>&times;</span>
                 </button>
             </div>
 
-            <button class="nav__toggle" id="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false"
-                aria-controls="nav-menu">
+            <button class="nav__toggle" id="nav-toggle" type="button" aria-label="Ouvrir le menu"
+                aria-expanded="false" aria-controls="nav-menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -114,11 +130,11 @@
                 <div class="about__content">
                     <div class="about__text">
                         <h3>{{APROPOS_TITRE_MISSION}}</h3>
-                        {{APROPOS_PARAGRAPHES}}
+{{APROPOS_PARAGRAPHES}}
                     </div>
 
                     <div class="about__values">
-                        {{APROPOS_VALEURS}}
+{{APROPOS_VALEURS}}
                     </div>
                 </div>
             </div>
@@ -133,7 +149,7 @@
                 </div>
 
                 <div class="services__grid">
-                    {{SERVICES_CARTES}}
+{{SERVICES_CARTES}}
                 </div>
             </div>
         </section>
@@ -147,12 +163,12 @@
                 </div>
 
                 <div class="services__grid">
-                    {{FORMATIONS_CARTES}}
+{{FORMATIONS_CARTES}}
                 </div>
             </div>
         </section>
 
-        {{SECTION_REALISATIONS}}
+{{SECTION_REALISATIONS}}
         <!-- Contact -->
         <section class="contact section" id="contact">
             <div class="container">
@@ -168,36 +184,28 @@
 
                         <div class="contact__details">
                             <div class="contact__item">
-                                <span class="contact__icon"><svg class="ico" aria-hidden="true">
-                                        <use href="#i-envelope"></use>
-                                    </svg></span>
+                                <span class="contact__icon"><svg class="ico" aria-hidden="true"><use href="#i-envelope"></use></svg></span>
                                 <div>
                                     <h4>Email</h4>
                                     <p><a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a></p>
                                 </div>
                             </div>
                             <div class="contact__item">
-                                <span class="contact__icon"><svg class="ico" aria-hidden="true">
-                                        <use href="#i-telephone"></use>
-                                    </svg></span>
+                                <span class="contact__icon"><svg class="ico" aria-hidden="true"><use href="#i-telephone"></use></svg></span>
                                 <div>
                                     <h4>Téléphone</h4>
                                     <p><a href="tel:{{CONTACT_TEL_LIEN}}">{{CONTACT_TEL}}</a></p>
                                 </div>
                             </div>
                             <div class="contact__item">
-                                <span class="contact__icon"><svg class="ico" aria-hidden="true">
-                                        <use href="#i-whatsapp"></use>
-                                    </svg></span>
+                                <span class="contact__icon"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"></use></svg></span>
                                 <div>
                                     <h4>WhatsApp</h4>
                                     <p><a href="https://wa.me/{{CONTACT_WA_LIEN}}" rel="noopener">{{CONTACT_WA}}</a></p>
                                 </div>
                             </div>
                             <div class="contact__item">
-                                <span class="contact__icon"><svg class="ico" aria-hidden="true">
-                                        <use href="#i-geo-alt"></use>
-                                    </svg></span>
+                                <span class="contact__icon"><svg class="ico" aria-hidden="true"><use href="#i-geo-alt"></use></svg></span>
                                 <div>
                                     <h4>Adresse</h4>
                                     <p>{{CONTACT_ADRESSE}}</p>
@@ -239,7 +247,7 @@
                             <label for="service" class="form__label">Service souhaité *</label>
                             <select id="service" name="service" class="form__input" required aria-required="true">
                                 <option value="">Sélectionnez un service</option>
-                                {{FORM_OPTIONS}}
+{{FORM_OPTIONS}}
                             </select>
                             <span class="form__error" id="service-error"></span>
                         </div>
@@ -270,7 +278,7 @@
                 <div class="footer__section">
                     <h3 class="footer__title">3D COACHING</h3>
                     <p class="footer__description">{{PIED_DESCRIPTION}}</p>
-                    {{PIED_RESEAUX}}
+{{PIED_RESEAUX}}
                 </div>
 
                 <div class="footer__section">
@@ -287,25 +295,17 @@
                 <div class="footer__section">
                     <h4 class="footer__subtitle">Nos Services</h4>
                     <ul class="footer__links">
-                        {{PIED_LIENS_SERVICES}}
+{{PIED_LIENS_SERVICES}}
                     </ul>
                 </div>
 
                 <div class="footer__section">
                     <h4 class="footer__subtitle">Contact</h4>
                     <ul class="footer__links footer__contact">
-                        <li><svg class="ico" aria-hidden="true">
-                                <use href="#i-envelope"></use>
-                            </svg> {{CONTACT_EMAIL}}</li>
-                        <li><svg class="ico" aria-hidden="true">
-                                <use href="#i-telephone"></use>
-                            </svg> {{CONTACT_TEL}}</li>
-                        <li><svg class="ico" aria-hidden="true">
-                                <use href="#i-whatsapp"></use>
-                            </svg> {{CONTACT_WA}}</li>
-                        <li><svg class="ico" aria-hidden="true">
-                                <use href="#i-geo-alt"></use>
-                            </svg> Q. Kigobe Nord, Bujumbura, Burundi</li>
+                        <li><svg class="ico" aria-hidden="true"><use href="#i-envelope"></use></svg> {{CONTACT_EMAIL}}</li>
+                        <li><svg class="ico" aria-hidden="true"><use href="#i-telephone"></use></svg> {{CONTACT_TEL}}</li>
+                        <li><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"></use></svg> {{CONTACT_WA}}</li>
+                        <li><svg class="ico" aria-hidden="true"><use href="#i-geo-alt"></use></svg> Q. Kigobe Nord, Bujumbura, Burundi</li>
                     </ul>
                 </div>
             </div>
@@ -319,17 +319,17 @@
     <!-- Visionneuse de photos -->
     <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo agrandie" hidden>
         <button class="lightbox__close" id="lightbox-close" type="button" aria-label="Fermer">&times;</button>
-        <button class="lightbox__nav lightbox__prev" id="lightbox-prev" type="button"
-            aria-label="Photo précédente">&#8249;</button>
+        <button class="lightbox__nav lightbox__prev" id="lightbox-prev" type="button" aria-label="Photo précédente">&#8249;</button>
         <figure class="lightbox__figure">
             <img class="lightbox__img" id="lightbox-img" src="" alt="">
             <figcaption class="lightbox__caption" id="lightbox-caption"></figcaption>
         </figure>
-        <button class="lightbox__nav lightbox__next" id="lightbox-next" type="button"
-            aria-label="Photo suivante">&#8250;</button>
+        <button class="lightbox__nav lightbox__next" id="lightbox-next" type="button" aria-label="Photo suivante">&#8250;</button>
     </div>
 
-    <script type="application/ld+json">{{JSONLD}}</script>
+    <!-- Données structurées pour Google. Même principe que pour les styles :
+         le repère est un commentaire, build.js le remplace par la balise complète. -->
+    <!--{{JSONLD}}-->
     <script src="script.js" defer></script>
     <script src="hero.js" defer></script>
 </body>

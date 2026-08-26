@@ -195,6 +195,60 @@ function renderJsonLd(c) {
     return JSON.stringify(data).replace(/</g, '\\u003c');
 }
 
+// --------------------------------------------------------------- vérification
+
+/**
+ * Refuse de produire une page abîmée.
+ *
+ * Un formateur automatique (VS Code « Format Document », Prettier) peut
+ * déformer un repère de template.html — c'est arrivé une fois à {{STYLES}},
+ * transformé en accolades imbriquées, et le site est parti en ligne sans
+ * aucun style. Mieux vaut une construction qui échoue, Netlify conserve
+ * alors la dernière version correcte, qu'une page cassée publiée en silence.
+ */
+function verifier(html) {
+    const restes = html.match(/\{\{[A-Z_]+\}\}/g);
+    if (restes) {
+        throw new Error('Repères non remplacés : ' + [...new Set(restes)].join(', '));
+    }
+
+    const deforme = html.match(/\{\s*\{\s*([A-Z_]{3,})\s*\}\s*\}/);
+    if (deforme) {
+        throw new Error(
+            `Le repère {{${deforme[1]}}} de template.html a été déformé, très probablement ` +
+            `par un formateur automatique. Rétablir la ligne d'origine dans template.html.`
+        );
+    }
+
+    const style = html.match(/<style>([\s\S]*?)<\/style>/);
+    if (!style || style[1].length < 2000) {
+        throw new Error(
+            'La page produite ne contient pas les styles.\n' +
+            'Vérifier que template.html contient bien la ligne :  <!--{{STYLES}}-->'
+        );
+    }
+
+    // Une balise insérée qui resterait enfermée dans son commentaire d'origine
+    // serait invisible pour le navigateur : la page s'afficherait sans style.
+    if (/<!--\s*<(style|script)/.test(html)) {
+        throw new Error(
+            'Une balise insérée est restée à l\'intérieur d\'un commentaire HTML.\n' +
+            'Le retrait de l\'enveloppe <!-- --> n\'a pas fonctionné dans build.js.'
+        );
+    }
+
+    if (!html.includes('application/ld+json')) {
+        throw new Error(
+            'Les données structurées sont absentes.\n' +
+            'Vérifier que template.html contient bien la ligne :  <!--{{JSONLD}}-->'
+        );
+    }
+
+    if (!html.includes('<svg class="sprite"')) {
+        throw new Error('Le jeu d\'icônes est absent : vérifier le repère {{SPRITE}}.');
+    }
+}
+
 // -------------------------------------------------------------------- build
 
 function build() {
@@ -261,15 +315,19 @@ function build() {
         PIED_RESEAUX: reseauxHtml,
         PIED_COPYRIGHT: esc(content.pied.copyright),
 
-        JSONLD: renderJsonLd(content),
-        STYLES: minifyCss(css),
+        JSONLD: `<script type="application/ld+json">${renderJsonLd(content)}</script>`,
+        STYLES: `<style>${minifyCss(css)}</style>`,
         SPRITE: renderSprite()
     };
 
+    // Les repères sensibles sont écrits en commentaire HTML dans template.html
+    // pour résister aux formateurs automatiques. On retire d'abord l'enveloppe
+    // du commentaire, sinon le contenu inséré resterait invisible.
+    html = html.replace(/<!--\s*(\{\{[A-Z_]+\}\})\s*-->/g, '$1');
+
     for (const [key, value] of Object.entries(values)) html = fill(html, key, value);
 
-    const reste = html.match(/\{\{[A-Z_]+\}\}/g);
-    if (reste) throw new Error('Marqueurs non remplacés : ' + reste.join(', '));
+    verifier(html);
 
     fs.writeFileSync(path.join(ROOT, 'index.html'), html);
 
