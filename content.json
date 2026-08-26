@@ -246,6 +246,12 @@
         "legende": "Atelier de Leadership pour les Jeunes de 7 à 18 ans",
         "largeur": 810,
         "hauteur": 1080
+      },
+      {
+        "fichier": "images/foto-12-mt9xntjl31h.webp",
+        "legende": "Apprendre aux enfants à mieux se connaître et à développer leur potentiel",
+        "largeur": 810,
+        "hauteur": 1080
       }
     ]
   },
@@ -270,5 +276,5 @@
     "copyright": "© 2026 3D COACHING. Tous droits réservés.",
     "reseaux": []
   },
-  "maj": "2026-08-26T10:02:32.260Z"
+  "maj": "2026-08-26T10:14:53.759Z"
 }
