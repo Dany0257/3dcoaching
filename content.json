@@ -212,12 +212,6 @@
     "afficher": true,
     "photos": [
       {
-        "fichier": "images/749535380-122125892751228250-32251990551-mt8rlzmbx1e.webp",
-        "legende": "",
-        "largeur": 1600,
-        "hauteur": 1200
-      },
-      {
         "fichier": "images/foto-6-mt9vsbmf5u6.webp",
         "legende": "Présence du Réprésentant du Ministère de l'Education et de la Recherche scientifique dans nos ateliers",
         "largeur": 1280,
@@ -276,24 +270,6 @@
         "legende": "Chaque voix compte : oser s’exprimer, révéler son potentiel et devenir acteur de son développement",
         "largeur": 1600,
         "hauteur": 1200
-      },
-      {
-        "fichier": "images/foto-18-mt9z37w5epr.webp",
-        "legende": "Le travail en équipe : développer le leadership, la créativité et l’esprit entrepreneurial des jeunes",
-        "largeur": 720,
-        "hauteur": 1080
-      },
-      {
-        "fichier": "images/foto19-mt9zh9p8tji.webp",
-        "legende": "Présentation des projets devant le jury.",
-        "largeur": 720,
-        "hauteur": 1080
-      },
-      {
-        "fichier": "images/foto-20-mt9zpe4b6fl.webp",
-        "legende": "Cérémonie de Remise des Certificats — Une étape franchie, Un nouveau départ !",
-        "largeur": 1080,
-        "hauteur": 720
       }
     ]
   },
@@ -318,5 +294,5 @@
     "copyright": "© 2026 3D COACHING. Tous droits réservés.",
     "reseaux": []
   },
-  "maj": "2026-08-26T11:12:45.915Z"
+  "maj": "2026-08-26T13:14:43.549Z"
 }
