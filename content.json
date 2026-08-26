@@ -228,6 +228,12 @@
         "legende": "Appuie à l'orientation scolaire,académique et professionnelle",
         "largeur": 1280,
         "hauteur": 757
+      },
+      {
+        "fichier": "images/foto-7-mt9wc72p8i4.webp",
+        "legende": "Coaching de carrière dans les écoles secondaires",
+        "largeur": 1280,
+        "hauteur": 853
       }
     ]
   },
@@ -252,5 +258,5 @@
     "copyright": "© 2026 3D COACHING. Tous droits réservés.",
     "reseaux": []
   },
-  "maj": "2026-08-26T09:32:18.367Z"
+  "maj": "2026-08-26T09:36:02.330Z"
 }
