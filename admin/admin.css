@@ -576,6 +576,13 @@ img {
     color: #16223F;
 }
 
+.photo__badge--manquant {
+    left: auto;
+    right: 8px;
+    background: var(--alerte);
+    color: #fff;
+}
+
 .photo__corps {
     padding: 10px 11px 11px;
     display: flex;

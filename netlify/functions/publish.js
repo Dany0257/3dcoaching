@@ -156,6 +156,17 @@ exports.handler = async (event) => {
             const commitBase = await github(
                 `/repos/${GITHUB_REPO}/git/commits/${ref.object.sha}`, { method: 'GET' }, GITHUB_TOKEN);
 
+            // Liste des fichiers réellement présents dans le dépôt.
+            // Indispensable : GitHub refuse le commit entier si on lui demande
+            // de supprimer un chemin qui n'existe pas. Sans ce garde-fou, une
+            // seule référence périmée bloque toute publication.
+            const arbreBase = await github(
+                `/repos/${GITHUB_REPO}/git/trees/${commitBase.tree.sha}?recursive=1`,
+                { method: 'GET' }, GITHUB_TOKEN);
+            const presents = new Set(
+                (arbreBase.tree || []).filter(e => e.type === 'blob').map(e => e.path)
+            );
+
             // 2. Ce que contiendra le nouveau commit
             const contenu = { ...corps.contenu, maj: new Date().toISOString() };
             const arbre = [{
@@ -165,16 +176,39 @@ exports.handler = async (event) => {
                 content: JSON.stringify(contenu, null, 2) + '\n'
             }];
 
+            const ajoutees = new Set();
             for (const ajout of ajouts) {
                 const nom = nomSur(ajout && ajout.chemin);
                 if (!nom || !ajout.sha) continue;
-                arbre.push({ path: `images/${nom}`, mode: '100644', type: 'blob', sha: ajout.sha });
+                const cible = `images/${nom}`;
+                arbre.push({ path: cible, mode: '100644', type: 'blob', sha: ajout.sha });
+                ajoutees.add(cible);
             }
 
+            let retireesReellement = 0;
             for (const chemin of suppressions) {
                 const nom = nomSur(chemin);
                 if (!nom) continue;
-                arbre.push({ path: `images/${nom}`, mode: '100644', type: 'blob', sha: null });
+                const cible = `images/${nom}`;
+                // Déjà absent du dépôt : rien à supprimer, et surtout ne pas
+                // l'envoyer à GitHub qui rejetterait le commit entier.
+                if (!presents.has(cible)) continue;
+                arbre.push({ path: cible, mode: '100644', type: 'blob', sha: null });
+                retireesReellement++;
+            }
+
+            // Photos référencées dont le fichier n'existe pas : elles s'affichent
+            // en image cassée sur le site. On retire la référence au passage.
+            const orphelines = [];
+            if (contenu.realisations && Array.isArray(contenu.realisations.photos)) {
+                contenu.realisations.photos = contenu.realisations.photos.filter(photo => {
+                    const chemin = photo && photo.fichier;
+                    if (!chemin) return false;
+                    if (presents.has(chemin) || ajoutees.has(chemin)) return true;
+                    orphelines.push(chemin);
+                    return false;
+                });
+                arbre[0].content = JSON.stringify(contenu, null, 2) + '\n';
             }
 
             const nouvelArbre = await github(`/repos/${GITHUB_REPO}/git/trees`, {
@@ -183,9 +217,11 @@ exports.handler = async (event) => {
             }, GITHUB_TOKEN);
 
             // 3. Le commit, puis on avance la branche
+            const pluriel = (n, mot) => `${n} ${mot}${n > 1 ? 's' : ''}`;
             const resume = [
-                ajouts.length ? `${ajouts.length} photo${ajouts.length > 1 ? 's' : ''} ajoutée${ajouts.length > 1 ? 's' : ''}` : null,
-                suppressions.length ? `${suppressions.length} photo${suppressions.length > 1 ? 's' : ''} retirée${suppressions.length > 1 ? 's' : ''}` : null
+                ajouts.length ? pluriel(ajouts.length, 'photo') + (ajouts.length > 1 ? ' ajoutées' : ' ajoutée') : null,
+                retireesReellement ? pluriel(retireesReellement, 'photo') + (retireesReellement > 1 ? ' retirées' : ' retirée') : null,
+                orphelines.length ? pluriel(orphelines.length, 'référence') + (orphelines.length > 1 ? ' périmées nettoyées' : ' périmée nettoyée') : null
             ].filter(Boolean).join(', ');
 
             const commit = await github(`/repos/${GITHUB_REPO}/git/commits`, {
@@ -202,7 +238,13 @@ exports.handler = async (event) => {
                 body: JSON.stringify({ sha: commit.sha })
             }, GITHUB_TOKEN);
 
-            return reponse(200, { ok: true, commit: commit.sha.slice(0, 7), maj: contenu.maj });
+            return reponse(200, {
+                ok: true,
+                commit: commit.sha.slice(0, 7),
+                maj: contenu.maj,
+                retirees: retireesReellement,
+                orphelines
+            });
         }
 
         return reponse(400, { erreur: 'Action inconnue.' });

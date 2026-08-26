@@ -482,6 +482,17 @@
                     </div>
                 </div>`;
 
+            // Signale clairement une photo dont le fichier n'est plus en ligne,
+            // plutôt que de laisser une vignette grise inexplicable.
+            const vignette = carte.querySelector('img');
+            vignette.addEventListener('error', () => {
+                carte.querySelector('.photo__image').insertAdjacentHTML(
+                    'beforeend',
+                    '<span class="photo__badge photo__badge--manquant">fichier introuvable</span>'
+                );
+                carte.querySelector('.photo__poids').textContent = '';
+            });
+
             const legende = carte.querySelector('.photo__legende');
             legende.value = texteSur(photo.legende);
             legende.addEventListener('input', () => {
@@ -853,17 +864,30 @@
 
             // 2. Le contenu
             etatPublication('Publication en cours…', 'Enregistrement du contenu…', 82, '');
-            await appelApi({
+            const resultat = await appelApi({
                 action: 'publier',
                 contenu,
                 ajouts,
                 suppressions: photosSupprimees
             });
 
+            // Le serveur a pu retirer des photos dont le fichier avait disparu :
+            // on aligne la liste affichée sur ce qui est réellement enregistré.
+            const orphelines = resultat.orphelines || [];
+            if (orphelines.length) {
+                const perdues = new Set(orphelines);
+                contenu.realisations.photos = contenu.realisations.photos
+                    .filter(p => !perdues.has(p.fichier));
+            }
+
             // 3. Terminé
+            const complement = orphelines.length
+                ? ` ${orphelines.length} photo${orphelines.length > 1 ? 's' : ''} dont le fichier avait disparu ${orphelines.length > 1 ? 'ont' : 'a'} été retirée${orphelines.length > 1 ? 's' : ''} de la liste.`
+                : '';
+
             etatPublication(
                 'C\'est publié !',
-                'Vos modifications seront visibles sur 3dcoaching.business dans environ une minute, le temps que le site se reconstruise.',
+                'Vos modifications seront visibles sur 3dcoaching.business dans environ une minute, le temps que le site se reconstruise.' + complement,
                 100, 'fini'
             );
             $('publication-ok').hidden = false;
