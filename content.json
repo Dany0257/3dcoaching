@@ -282,6 +282,12 @@
         "legende": "Le travail en équipe : développer le leadership, la créativité et l’esprit entrepreneurial des jeunes",
         "largeur": 720,
         "hauteur": 1080
+      },
+      {
+        "fichier": "images/foto19-mt9zh9p8tji.webp",
+        "legende": "Présentation des projets devant le jury.",
+        "largeur": 720,
+        "hauteur": 1080
       }
     ]
   },
@@ -306,5 +312,5 @@
     "copyright": "© 2026 3D COACHING. Tous droits réservés.",
     "reseaux": []
   },
-  "maj": "2026-08-26T10:54:00.408Z"
+  "maj": "2026-08-26T11:03:13.054Z"
 }
