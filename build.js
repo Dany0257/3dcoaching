@@ -174,7 +174,10 @@ function renderJsonLd(c) {
         slogan: c.hero.slogan,
         description: c.site.description,
         url: 'https://3dcoaching.business/',
-        image: 'https://3dcoaching.business/logo3d.jpeg',
+        // « logo » est la propriété que Google utilise pour le panneau de
+        // connaissance ; « image » sert d'illustration générale.
+        logo: 'https://3dcoaching.business/logo-3dcoaching.png',
+        image: 'https://3dcoaching.business/logo-3dcoaching.png',
         email: c.contact.email,
         telephone: c.contact.telephone,
         address: {
