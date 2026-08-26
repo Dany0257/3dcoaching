@@ -216,6 +216,12 @@
         "legende": "",
         "largeur": 1600,
         "hauteur": 1200
+      },
+      {
+        "fichier": "images/foto-6-mt9vsbmf5u6.webp",
+        "legende": "Présence du Réprésentant du Ministère de l'Education et de la Recherche scientifique dans nos ateliers",
+        "largeur": 1280,
+        "hauteur": 831
       }
     ]
   },
@@ -240,5 +246,5 @@
     "copyright": "© 2026 3D COACHING. Tous droits réservés.",
     "reseaux": []
   },
-  "maj": "2026-08-25T14:33:35.092Z"
+  "maj": "2026-08-26T09:29:03.723Z"
 }
