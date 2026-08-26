@@ -236,12 +236,6 @@
         "hauteur": 853
       },
       {
-        "fichier": "images/foto10-mt9wqyx4qxj.webp",
-        "legende": "Visite des coachs de 3D COACHING dans les établissements scolaires",
-        "largeur": 1080,
-        "hauteur": 720
-      },
-      {
         "fichier": "images/foto-11-mt9x65mace5.webp",
         "legende": "Atelier de Leadership pour les Jeunes de 7 à 18 ans",
         "largeur": 810,
@@ -258,6 +252,12 @@
         "legende": "Apprendre à s’exprimer avec confiance et à prendre la parole en public dès le plus jeune âge",
         "largeur": 810,
         "hauteur": 1080
+      },
+      {
+        "fichier": "images/foto-14-mt9y4o5l4hd.webp",
+        "legende": "Exercices de travail en équipe",
+        "largeur": 1600,
+        "hauteur": 1200
       }
     ]
   },
@@ -282,5 +282,5 @@
     "copyright": "© 2026 3D COACHING. Tous droits réservés.",
     "reseaux": []
   },
-  "maj": "2026-08-26T10:17:55.436Z"
+  "maj": "2026-08-26T10:28:05.578Z"
 }
