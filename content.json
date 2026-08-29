@@ -206,8 +206,8 @@
       },
       {
         "icone": "trophy",
-        "titre": "Formation des Coachs Certifiés",
-        "accroche": "Devenez coach certifié pour révéler les talents et transformer des vies .",
+        "titre": "Formation des Coachs Certifiés.",
+        "accroche": "Devenez coach certifié pour révéler les talents et transformer des vies",
         "description": "Devenir coach certifié, c’est acquérir les compétences et les outils nécessaires pour accompagner efficacement les personnes dans leur développement personnel et professionnel. La certification renforce la crédibilité, la confiance et le professionnalisme du coach, tout en lui permettant de contribuer à révéler les talents et à créer un impact positif dans sa communauté.",
         "id": "formation-des-coachs-certifies"
       }
@@ -301,5 +301,5 @@
     "copyright": "© 2026 3D COACHING. Tous droits réservés.",
     "reseaux": []
   },
-  "maj": "2026-08-29T17:37:24.762Z"
+  "maj": "2026-08-29T17:52:35.094Z"
 }
