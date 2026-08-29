@@ -276,6 +276,12 @@
         "legende": "Chaque membre apporte ses connaissances, ses talents et son expérience, ce qui permet de mieux réaliser les tâches.",
         "largeur": 1080,
         "hauteur": 720
+      },
+      {
+        "fichier": "images/picture-1-mtepiefw9pu.webp",
+        "legende": "Nous ne formons pas seulement des participants, nous formons aussi des formateurs capables de transmettre, d’accompagner",
+        "largeur": 1080,
+        "hauteur": 720
       }
     ]
   },
@@ -300,5 +306,5 @@
     "copyright": "© 2026 3D COACHING. Tous droits réservés.",
     "reseaux": []
   },
-  "maj": "2026-08-29T18:16:21.527Z"
+  "maj": "2026-08-29T18:21:39.436Z"
 }
