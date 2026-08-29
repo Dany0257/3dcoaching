@@ -288,6 +288,12 @@
         "legende": "Présentation des projets devant le jury",
         "largeur": 720,
         "hauteur": 1080
+      },
+      {
+        "fichier": "images/foto-20-mtepoztvj1r.webp",
+        "legende": "Céremonie de Remise des Certificats.",
+        "largeur": 1080,
+        "hauteur": 720
       }
     ]
   },
@@ -312,5 +318,5 @@
     "copyright": "© 2026 3D COACHING. Tous droits réservés.",
     "reseaux": []
   },
-  "maj": "2026-08-29T18:24:30.015Z"
+  "maj": "2026-08-29T18:28:16.983Z"
 }
