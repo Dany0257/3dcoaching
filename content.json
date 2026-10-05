@@ -300,6 +300,12 @@
         "legende": "Encouragement des jeunes dans la protection de l'environnement.",
         "largeur": 1080,
         "hauteur": 485
+      },
+      {
+        "fichier": "images/799868366-122133313407228250-46140583621-muvlhtnkq3m.webp",
+        "legende": "Un jeune sensibilisé devient un acteur du changement.  Un déchet valorisé devient une ressource. ",
+        "largeur": 1080,
+        "hauteur": 485
       }
     ]
   },
@@ -324,5 +330,5 @@
     "copyright": "© 2026 3D COACHING. Tous droits réservés.",
     "reseaux": []
   },
-  "maj": "2026-10-05T18:34:54.529Z"
+  "maj": "2026-10-05T18:43:02.139Z"
 }
