@@ -6,8 +6,8 @@
   },
   "hero": {
     "titre": "3D COACHING",
-    "slogan": "Chaque talent compte, surtout le tien.",
-    "description": "Développez votre potentiel et renforcez la performance de votre organisation avec nos solutions professionnelles innovantes.",
+    "slogan": "Découvrez vos talents - Développez votre potentiel - Déployez votre réussite.",
+    "description": "Notre coaching est humain, simple et profondément transformateur.\nNous écoutons, nous questionnons et nous accompagnons pour que vous trouviez vos propres solutions.\n",
     "boutonPrincipal": "Découvrir nos services",
     "boutonSecondaire": "Nous contacter"
   },
@@ -330,5 +330,5 @@
     "copyright": "© 2026 3D COACHING. Tous droits réservés.",
     "reseaux": []
   },
-  "maj": "2026-10-05T18:43:02.139Z"
+  "maj": "2026-10-05T18:56:36.574Z"
 }
