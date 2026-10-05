@@ -272,12 +272,6 @@
         "hauteur": 1200
       },
       {
-        "fichier": "images/dodo-5-muvjbpu50vg.webp",
-        "legende": "La Coordinatrice de 3D COACHING était présente à Magara pour une séance de coaching et de sensibilisation dédiée à l'ent",
-        "largeur": 720,
-        "hauteur": 1080
-      },
-      {
         "fichier": "images/dodo-7-muvjnyz2pj0.webp",
         "legende": "Formation dédiée aux jeunes de 18 à 30 ans sur l'entrepreneuriat social.",
         "largeur": 1080,
@@ -286,6 +280,12 @@
       {
         "fichier": "images/784980323-122130190671228250-14498280185-muvjuwcsx0z.webp",
         "legende": "Présentation des projets devant le jury.",
+        "largeur": 720,
+        "hauteur": 1080
+      },
+      {
+        "fichier": "images/dodo-5-muvkbc75d2t.webp",
+        "legende": "La Coordinatrice de 3D COACHING aux côtés des jeunes de Magara pour promouvoir l'entrepreneuriat social",
         "largeur": 720,
         "hauteur": 1080
       }
@@ -312,5 +312,5 @@
     "copyright": "© 2026 3D COACHING. Tous droits réservés.",
     "reseaux": []
   },
-  "maj": "2026-10-05T17:57:04.673Z"
+  "maj": "2026-10-05T18:09:10.587Z"
 }
