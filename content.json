@@ -338,9 +338,9 @@
     "reseaux": []
   },
   "maintenance": {
-    "actif": false,
+    "actif": true,
     "titre": "Site en maintenance",
     "message": "Nous améliorons notre site pour mieux vous accompagner. Nous revenons très bientôt.\nEn attendant, vous pouvez nous joindre par e-mail ou par téléphone."
   },
-  "maj": "2026-10-05T19:11:40.226Z"
+  "maj": "2026-10-12T10:03:45.265Z"
 }
