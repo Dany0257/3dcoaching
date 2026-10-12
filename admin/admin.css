@@ -645,6 +645,22 @@ img {
     border-bottom: 1px solid var(--trait-doux);
 }
 
+.interrupteur {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--texte-2);
+    cursor: pointer;
+}
+
+.interrupteur input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--or-fonce);
+}
+
 .grille-2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));

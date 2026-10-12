@@ -713,7 +713,26 @@
                 <div class="groupe__titre">Pied de page</div>
                 ${champ('pied.description', 'Texte de présentation', '', { zone: true, max: 300, lignes: 3 })}
                 ${champ('pied.copyright', 'Mention de bas de page', '', { max: 120 })}
+            </div>
+
+            <div class="groupe">
+                <div class="groupe__titre">Mode maintenance</div>
+                <label class="interrupteur">
+                    <input type="checkbox" id="maintenance-actif">
+                    <span>Mettre le site en pause</span>
+                </label>
+                <span class="champ__aide">Une fois publié, les visiteurs voient seulement une page « Site en maintenance » avec votre e-mail et votre téléphone. Google garde le site dans ses résultats. L'espace admin reste accessible : décochez puis publiez pour remettre le site en ligne.</span>
+                ${champ('maintenance.titre', 'Titre de la page de maintenance', '', { max: 80 })}
+                ${champ('maintenance.message', 'Message aux visiteurs', '', { zone: true, max: 400, lignes: 3 })}
             </div>`;
+
+        const caseMaintenance = $('maintenance-actif');
+        caseMaintenance.checked = !!(c.maintenance && c.maintenance.actif);
+        caseMaintenance.addEventListener('change', () => {
+            if (c.maintenance == null) c.maintenance = {};
+            c.maintenance.actif = caseMaintenance.checked;
+            marquerModifie();
+        });
 
         boite.querySelectorAll('[data-chemin]').forEach(element => {
             const chemin = element.dataset.chemin.split('.');
