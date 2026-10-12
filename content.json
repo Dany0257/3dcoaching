@@ -337,5 +337,10 @@
     "copyright": "© 2026 3D COACHING. Tous droits réservés.",
     "reseaux": []
   },
+  "maintenance": {
+    "actif": false,
+    "titre": "Site en maintenance",
+    "message": "Nous améliorons notre site pour mieux vous accompagner. Nous revenons très bientôt.\nEn attendant, vous pouvez nous joindre par e-mail ou par téléphone."
+  },
   "maj": "2026-10-05T19:11:40.226Z"
 }

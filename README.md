@@ -44,6 +44,7 @@ construction et vos changements seraient perdus. Modifiez `template.html`
 | `icons.js` | Jeu d'icônes SVG (Bootstrap Icons, MIT), intégré au site. |
 | `images/` | Les photos envoyées depuis l'espace admin. |
 | `admin/` | L'espace de gestion du contenu. |
+| `netlify/edge-functions/maintenance.js` | Affiche la page « Site en maintenance » (code 503) quand `maintenance.actif` vaut `true`. |
 | `netlify/functions/` | `login.js` (connexion) et `publish.js` (écriture dans GitHub). |
 | `outils/mot-de-passe.js` | Fabrique l'empreinte du mot de passe admin. |
 | `GUIDE-ADMIN.html` | Mode d'emploi illustré, destiné à la personne qui gère le contenu. |
@@ -88,6 +89,18 @@ Pour changer le mot de passe : relancer l'outil et remplacer
 `ADMIN_PASSWORD_HASH`. Le mot de passe en clair n'est stocké nulle part.
 
 ---
+
+## Mettre le site en pause
+
+Dans `/admin`, onglet **Textes & contact**, section **Mode maintenance** :
+cochez **Mettre le site en pause**, puis publiez. Après la reconstruction
+(environ une minute), les visiteurs voient une page de maintenance avec vos
+coordonnées. Elle renvoie le code 503, donc Google garde le site dans ses
+résultats. L'espace admin reste accessible. Pour remettre le site en ligne,
+décochez la case puis publiez à nouveau.
+
+Sans l'espace admin, on obtient le même résultat en passant `"actif"` à
+`true` (ou à `false`) dans la section `maintenance` de `content.json`.
 
 ## Sécurité
 
